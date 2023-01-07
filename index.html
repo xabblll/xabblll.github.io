@@ -1,1 +1,40 @@
-Hello Horld
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>JS Fileread test</h1>
+
+<p id="demo"></p>
+
+</body>
+</html>
+
+<script>
+    function readTextFile(file)
+    {
+        let rawFile = new XMLHttpRequest();
+        let outputText = "";
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function ()
+        {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    outputText = rawFile.responseText;
+                }
+            }
+        }
+        rawFile.send(null);
+        return outputText;
+    }
+    
+    let txt = "JS to html!";
+    txt = readTextFile("/pages/NewFile1.txt");
+    
+    document.getElementById("demo").innerHTML = txt;
+</script>
+
