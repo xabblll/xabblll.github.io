@@ -13,50 +13,60 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-    // function readTextFile(file)
-    // {
-    //     let rawFile = new XMLHttpRequest();
-    //     let outputText = "";
-    //     rawFile.open("GET", file, false);
-    //     rawFile.onreadystatechange = function ()
-    //     {
-    //         if(rawFile.readyState === 4)
-    //         {
-    //             if(rawFile.status === 200 || rawFile.status == 0)
-    //             {
-    //                 outputText = rawFile.responseText;
-    //             }
-    //         }
-    //     }
-    //     rawFile.send(null);
-    //     return outputText;
-    // }
-    
+    function readTextFile(file)
+    {
+        let rawFile = new XMLHttpRequest();
+        let outputText = "";
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function ()
+        {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status === 0)
+                {
+                    outputText = rawFile.responseText;
+                }
+            }
+        }
+        rawFile.send(null);
+        return outputText;
+    }
+
     function loadManifestJson()
     {
-        let jsonString = "";
-        console.log("Reading JSON...");
-        $.getJSON("https://xabblll.github.io/_manifest.json", function(data){
-            console.log("data read 1" + data);
-            jsonString = data;
-        });
-        if(jsonString === "")
-            $.getJSON("https://xabblll.github.io/master/_manifest.json", function(data){
-                console.log("data read 2" + data);
-                jsonString = data;
-            });
-        if(jsonString === "")
-            $.getJSON("https://github.com/xabblll/xabblll.github.io/blob/master/_manifest.json", function(data){
-                console.log("data read 3" + data);
-                jsonString = data;
-            });
-        if(jsonString === "")
-            $.getJSON("https://github.com/xabblll/xabblll.github.io/blob/9d91e73019830e68a4649ece5ebfd13c03536482/_manifest.json", function(data){
-                console.log("data read 4" + data);
-                jsonString = data;
-            });
-        return JSON.parse(jsonString);
+        let manifestJson = readTextFile("_manifest.html");
+        if(manifestJson === "")
+        {
+            return null;
+        }
+        return JSON.parse(manifestJson);
     }
+    
+    // function loadManifestJson()
+    // {
+    //     let jsonString = "";
+    //     console.log("Reading JSON...");
+    //     $.getJSON("https://xabblll.github.io/_manifest.json", function(data){
+    //         console.log("data read 1" + data);
+    //         jsonString = data;
+    //     });
+    //     if(jsonString === "")
+    //         $.getJSON("https://xabblll.github.io/master/_manifest.json", function(data){
+    //             console.log("data read 2" + data);
+    //             jsonString = data;
+    //         });
+    //     if(jsonString === "")
+    //         $.getJSON("https://github.com/xabblll/xabblll.github.io/blob/master/_manifest.json", function(data){
+    //             console.log("data read 3" + data);
+    //             jsonString = data;
+    //         });
+    //     if(jsonString === "")
+    //         $.getJSON("https://github.com/xabblll/xabblll.github.io/blob/9d91e73019830e68a4649ece5ebfd13c03536482/_manifest.json", function(data){
+    //             console.log("data read 4" + data);
+    //             jsonString = data;
+    //         });
+    //     return JSON.parse(jsonString);
+    // }
     
     let manifest = loadManifestJson();
     
