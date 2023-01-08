@@ -1,24 +1,46 @@
-// import $ from 'https://code.jquery.com/jquery-3.3.1.min.js';
-// import constants from "siteConstants.js";
+document.head.innerHTML += '<link rel="stylesheet" href="/styles/styles.css">';
 
-// document.head.innerHTML += '<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>';
-var s = document.createElement("script");
-s.src = "/js/siteConstants.js";
-document.head.appendChild(s);
+drawPage(document.body.innerHTML);
 
-s.onload = function(e){drawHeaderMenu();};
+function drawPage(content) {
+    let html = "";
+    html += bodyStart();
+    html += doHeader();
+    //Content
+    html += content;
+    html += bodyEnd();
+    
+    document.body.innerHTML = html;
+}
+
+function bodyStart()
+{
+    return '<div class="bodyInner"><div class="pageContent">';
+}
+
+function bodyEnd()
+{
+    return '</div></div>';
+}
+
+function doHeader()
+{
+    var s = document.createElement("script");
+    s.src = "/js/siteConstants.js";
+    document.head.appendChild(s);
+    s.onload = function(e){drawHeaderMenu();};
+    
+    return '<div id="headerMenu">header</div>';
+}
 
 function drawHeaderMenu(){
     let headerLinks = getHeaderLinks();
-    let headerMenuHtml = "";
-    headerMenuHtml += '<div class="navbar">';
+    let headerMenuHtml = '<div class="navbar"><div class="navbarContent">';
     for(let i = 0; i < headerLinks.length; i++)
     {
         let headerMenuItem = headerLinks[i];
         headerMenuHtml += '<a href="' + headerLinks[i].path + '" class="headerMenuItem">'+headerMenuItem.name+'</a>';
     }
-    headerMenuHtml += '</div>';
-    headerMenuHtml += '<div style="height: 160px"></div>';
+    headerMenuHtml += '</div></div><div style="height: 64px"></div>';
     document.getElementById("headerMenu").innerHTML = headerMenuHtml;
 }
-
