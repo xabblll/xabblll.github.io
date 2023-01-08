@@ -49,12 +49,12 @@
     vertical-align: middle;
     display: table-cell;
     height: inherit;
-    width: 144px;
+    width: 160px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     /*font: menu;*/
-    font-family: "JetBrains Mono", monospace;
-    font-weight: bold;
+    font-family: "Helvetica Neue", monospace;
+    font-weight: normal;
     letter-spacing: 1.5px;
 }
 
@@ -94,14 +94,29 @@ body
 
 .pageContent
 {
-    padding: 1px;
+    padding-top: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 0;
     margin: auto;
+    
     max-width: 1000px;
     /*min-height: 100vh;*/
     /*background-color: #887272;*/
     alignment: center;
     text-align: center;
     font-family: "JetBrains Mono", monospace;
+    /*align-items: center;*/
+    /*align-content: center;*/
+    /*margin-block: auto;*/
+}
+
+.pageContentInner
+{
+    /*padding-right: ;*/
+    padding: 0;
+    margin: unset;
+    /*background-color: #331111;*/
 }
 
 h1
@@ -112,22 +127,45 @@ h1
     /*background-color: #333;*/
     text-align: left;
     font-weight: bold;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+h2
+{
+    font-family: "Helvetica", monospace;
+    color: #FFF;
+    font-size: 48px;
+    /*background-color: #333;*/
+    text-align: left;
+    font-weight: bold;
+    margin: 0;
+
+
 }
 
 img
 {
     text-align: center;
-    max-width: 1000px;
+    padding: 10px;
+    max-width: 100%;
     margin: auto;
 }
 
 
 p
 {
-    font-family: "Helvetica", monospace;
+    font-family: "Arial", monospace;
     font-size: 20px;
-    color: #BBAA99;
+    /*color: #B0AAA0;*/
+    color: #FFFFFF99;
     text-align: left;
+}
+
+.test11
+{
+    width: 1200px;
+    height: 300px;
+    color: yellow;
+    background-color: #111111;
 }

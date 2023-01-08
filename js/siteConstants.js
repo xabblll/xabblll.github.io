@@ -1,7 +1,8 @@
 const Links =
     [
-        {"path": "/", "name": "HOME"},
-        {"path": "/pages/TestBlogPage.html", "name": "PODRACING"},
+        {"path": "/", "name": "Home"},
+        {"path": "/pages/TestBlogPage.html", "name": "Podracing"},
+        {"path": "/pages/AboutMe.html", "name": "About Me"},
     ];
 
 function getHeaderLinks()

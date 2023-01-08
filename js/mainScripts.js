@@ -17,12 +17,12 @@ function drawPage(content) {
 function bodyStart()
 {
     //<div style="height: 64px;"></div>
-    return '</div><div class="bodyInner"><div class="pageContent">';
+    return '</div><div class="bodyInner"><div class="pageContent"><div class="pageContentInner">';
 }
 
 function bodyEnd()
 {
-    return '</div></div>';
+    return '</div></div></div>';
 }
 
 function doHeader()
