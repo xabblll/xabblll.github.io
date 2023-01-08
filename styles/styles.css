@@ -72,20 +72,24 @@ body
 {
     padding: 0;
     margin: 0;
-    background: #171717;
+    /*background: #171717;*/
     width: 100%;
     height: 100%;
+
+    background: radial-gradient(ellipse at top, #765, #311),
+    radial-gradient(ellipse at bottom, #111, #311);
+    background-attachment: fixed;
+    background-color: #171717;
+
 }
 
 .bodyInner 
 {
-    background-color: #171717;
-    background: radial-gradient(ellipse at top, #765, #311),
-                radial-gradient(ellipse at bottom, #111, #311);
+    /*I love HTML and CSS*/
     /*background-position: top;*/
-    background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
+    /*position: fixed;*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
     /*height: inherit;*/
     /*min-height: 900px;*/
     /*height: 100%;*/
@@ -94,6 +98,7 @@ body
 
 .pageContent
 {
+    /*position: initial;*/
     margin: auto;
     max-width: 1400px;
     height: 100vh;
