@@ -11,8 +11,6 @@
 </html>
 
 <script>
-    const manifestPath = "/pages/_manifest.json";
-    
     function readTextFile(file)
     {
         let rawFile = new XMLHttpRequest();
@@ -32,14 +30,14 @@
         return outputText;
     }
     
-    const manifestJson = readTextFile(manifestPath);
+    const manifestJson = readTextFile("pages/_manifest.json");
     const manifset = JSON.parse(manifestJson);
     
-    let html = 'JS<br><br>';
+    let html = '<h4>Pages</h4>';
     for(let i = 0; i < manifset.length; i++)
     {
         let item = manifset[i];
-        html += '<a href="'+item.path+'">' + item.name + '</a>';
+        html += '<li><a href="'+item.path+'">' + item.name + '</a></li>';
     }
     
     document.getElementById("demo").innerHTML = html;
