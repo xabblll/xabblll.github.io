@@ -15,13 +15,6 @@
     vert-align: middle;
 }
 
-.headerMenu
-{
-    background-color: aqua;
-    color: chartreuse;
-    text-align: center;
-}
-
 .headerMenuItem
 {
     text-align: center;
@@ -36,11 +29,14 @@
     left: 0;
     background-color: #0003;
     background-image: linear-gradient(#0008, #0003);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    backdrop-filter: saturate(180%) blur(16px);
+
 }
 .navbarContent
 {
     margin: auto;
-    max-width: 1400px;
+    max-width: 1000px;
     height: 100%;
     vertical-align: middle;
     display: table;
@@ -64,7 +60,6 @@
 
 .navbarContent a:hover {
     background: #fff5;
-    /*background-image: linear-gradient(#FFF1 50%, #FFF1);*/
     color: black;
 }
 
@@ -72,12 +67,11 @@ body
 {
     padding: 0;
     margin: 0;
-    /*background: #171717;*/
     width: 100%;
     height: 100%;
-
-    background: radial-gradient(ellipse at top, #765, #311),
-    radial-gradient(ellipse at bottom, #111, #311);
+    background: 
+            radial-gradient(ellipse at top, #765, #311), 
+            radial-gradient(ellipse at bottom, #111, #311);
     background-attachment: fixed;
     background-color: #171717;
 
@@ -94,18 +88,46 @@ body
     /*min-height: 900px;*/
     /*height: 100%;*/
     /*max-width: 1400px;*/
+    /*top: 64px;*/
+
 }
 
 .pageContent
 {
-    /*position: initial;*/
+    padding: 1px;
     margin: auto;
-    max-width: 1400px;
-    height: 100vh;
-    /*background-color: #171717;*/
+    max-width: 1000px;
+    /*min-height: 100vh;*/
+    /*background-color: #887272;*/
     alignment: center;
     text-align: center;
+    font-family: "JetBrains Mono", monospace;
+}
+
+h1
+{
+    font-family: "Helvetica", monospace;
+    color: #FFF;
+    font-size: 128px;
+    /*background-color: #333;*/
+    text-align: left;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+img
+{
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
 }
 
 
-/*p {text-align: center;}*/
+p
+{
+    font-family: "Helvetica", monospace;
+    font-size: 20px;
+    color: #BBAA99;
+    text-align: left;
+}

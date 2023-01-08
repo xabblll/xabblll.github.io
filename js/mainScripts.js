@@ -4,18 +4,20 @@ drawPage(document.body.innerHTML);
 
 function drawPage(content) {
     let html = "";
-    html += bodyStart();
     html += doHeader();
+
+    html += bodyStart();
     //Content
     html += content;
     html += bodyEnd();
-    
+
     document.body.innerHTML = html;
 }
 
 function bodyStart()
 {
-    return '<div class="bodyInner"><div class="pageContent">';
+    //<div style="height: 64px;"></div>
+    return '</div><div class="bodyInner"><div class="pageContent">';
 }
 
 function bodyEnd()
@@ -28,7 +30,7 @@ function doHeader()
     var s = document.createElement("script");
     s.src = "/js/siteConstants.js";
     document.head.appendChild(s);
-    s.onload = function(e){drawHeaderMenu();};
+    s.onload = function(){drawHeaderMenu();};
     
     return '<div id="headerMenu">header</div>';
 }
@@ -41,6 +43,6 @@ function drawHeaderMenu(){
         let headerMenuItem = headerLinks[i];
         headerMenuHtml += '<a href="' + headerLinks[i].path + '" class="headerMenuItem">'+headerMenuItem.name+'</a>';
     }
-    headerMenuHtml += '</div></div><div style="height: 64px"></div>';
+    headerMenuHtml += '</div></div><div style="height: 64px; padding: 0; margin: 0;"></div>';
     document.getElementById("headerMenu").innerHTML = headerMenuHtml;
 }
