@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>JS Fileread test</h1>
+<h1>JS Manifest test</h1>
 <p id="demo"></p>
 </body>
 </html>
@@ -30,13 +30,18 @@
         return outputText;
     }
     
-    const manifestJson = readTextFile("pages/_manifest.json");
-    const manifset = JSON.parse(manifestJson);
+    let manifestJson = readTextFile("pages/_manifest.html");
+    if(manifestJson.length === 0)
+    {
+        console.log("error reading manifest :(");
+        stop();
+    }
+    let manifest = JSON.parse(manifestJson);
     
     let html = '<h4>Pages</h4>';
-    for(let i = 0; i < manifset.length; i++)
+    for(let i = 0; i < manifest.length; i++)
     {
-        let item = manifset[i];
+        let item = manifest[i];
         html += '<li><a href="'+item.path+'">' + item.name + '</a></li>';
     }
     
