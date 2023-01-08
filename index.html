@@ -6,13 +6,13 @@
 </head>
 <body>
 <h1>JS Fileread test</h1>
-
 <p id="demo"></p>
-
 </body>
 </html>
 
 <script>
+    const manifestPath = "/pages/_manifest.json";
+    
     function readTextFile(file)
     {
         let rawFile = new XMLHttpRequest();
@@ -32,9 +32,16 @@
         return outputText;
     }
     
-    let txt = "JS to html!";
-    txt = readTextFile("/pages/NewFile1.txt");
+    const manifestJson = readTextFile(manifestPath);
+    const manifset = JSON.parse(manifestJson);
     
-    document.getElementById("demo").innerHTML = txt;
+    let html = 'JS<br><br>';
+    for(let i = 0; i < manifset.length; i++)
+    {
+        let item = manifset[i];
+        html += '<a href="'+item.path+'">' + item.name + '</a>';
+    }
+    
+    document.getElementById("demo").innerHTML = html;
 </script>
 
