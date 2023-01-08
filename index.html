@@ -10,6 +10,7 @@
 </body>
 </html>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
     function readTextFile(file)
     {
@@ -30,7 +31,13 @@
         return outputText;
     }
     
-    let manifestJson = readTextFile("pages/_manifest.html");
+    let github_link = 'https://github.com/xabblll/xabblll.github.io/blob/master/_manifest.json';
+    $.getJSON(github_link, function(manifestJson) {
+            //data is the JSON string
+            console.log(manifestJson);
+        });
+    
+    // let manifestJson = readTextFile("_manifest.json");
     if(manifestJson.length === 0)
     {
         console.log("error reading manifest :(");
