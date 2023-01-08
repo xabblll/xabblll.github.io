@@ -27,5 +27,50 @@
     text-align: center;
 }
 
-/*div {text-align: center;}*/
+.navbar
+{
+    position: fixed;
+    width: 100%;
+    height: 64px;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #0003;
+    background-image: linear-gradient(#0008, #0003);
+}
+
+.navbar a {
+    float: initial;
+    color: #f2f2f2;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    height: inherit;
+    width: 128px;
+    text-decoration: none;
+    font-size: 18px;
+    /*font: menu;*/
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+body 
+{
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+    background: radial-gradient(ellipse at top, #765, #311),
+                radial-gradient(ellipse at bottom, #111, #311);
+    /*background-position: top;*/
+    background-attachment: fixed;
+    max-width: 1400px;
+}
 /*p {text-align: center;}*/

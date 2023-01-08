@@ -11,11 +11,14 @@ s.onload = function(e){drawHeaderMenu();};
 function drawHeaderMenu(){
     let headerLinks = getHeaderLinks();
     let headerMenuHtml = "";
+    headerMenuHtml += '<div class="navbar">';
     for(let i = 0; i < headerLinks.length; i++)
     {
         let headerMenuItem = headerLinks[i];
-        headerMenuHtml += '<a href="' + headerLinks[i].path + '" class="headerMenuItem">'+headerMenuItem.name+'</a><br>'
+        headerMenuHtml += '<a href="' + headerLinks[i].path + '" class="headerMenuItem">'+headerMenuItem.name+'</a>';
     }
+    headerMenuHtml += '</div>';
+    headerMenuHtml += '<div style="height: 160px"></div>';
     document.getElementById("headerMenu").innerHTML = headerMenuHtml;
 }
 
