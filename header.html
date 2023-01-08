@@ -1,0 +1,19 @@
+<!--
+    
+    CONTENT
+    
+-->
+<!--<dir class="headerMenu">-->
+<!--    -->
+<!--</dir>-->
+<div id="headerMenu"></div>
+<script src="/js/siteConstants.js"></script>
+<script>
+    let headerLinks = getHeaderLinks();
+    let headerMenuHtml = "";
+    for(let i = 0; i < headerLinks.length; i++)
+    {
+        headerMenuHtml += '<div class="headerMenuItem">Link</div>'
+    }
+    document.getElementById("headerMenu").innerHTML = html;
+</script>
