@@ -63,7 +63,7 @@ body
             radial-gradient(ellipse at bottom, #111, #311);
     background-attachment: fixed;
     background-color: #171717;
-
+    -webkit-font-smoothing: antialiased;
 }
 
 .bodyInner 
