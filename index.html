@@ -5,48 +5,8 @@
     <title>Xabblll's Site</title>
 </head>
 <body>
-    <h1>Useful links</h1>
-    <p id="demo"></p>
-    <!--test-->
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
-    <div>someshit</div><br>
+<!--    <h1>Useful links</h1>-->
+    <p id="recent posts"></p>
 </body>
 </html>
 
@@ -55,13 +15,13 @@
 <script src="js/mainScripts.js"></script>
 <script>
     let manifest = getManifest();
-    let html = '<h4>Pages</h4>';
-    for(let i = 0; i < manifest.length; i++)
+    let html = '<h2>Recent</h2>';
+    for(let i = manifest.length - 1, j = 0; i >= 0 && j < 3; i--, j++)
     {
         let item = manifest[i];
         html += '<li><a href="'+item.path+'">' + item.name + '</a></li>';
     }
     
-    document.getElementById("demo").innerHTML = html;
+    document.getElementById("recent posts").innerHTML = html;
 </script>
 

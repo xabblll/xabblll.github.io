@@ -9,6 +9,7 @@ function drawPage(content) {
     html += bodyStart();
     //Content
     html += content;
+    html += drawFooter();
     html += bodyEnd();
 
     document.body.innerHTML = html;
@@ -45,4 +46,11 @@ function drawHeaderMenu(){
     }
     headerMenuHtml += '</div></div><div style="height: 64px; padding: 0; margin: 0;"></div>';
     document.getElementById("headerMenu").innerHTML = headerMenuHtml;
+}
+
+function drawFooter()
+{
+    //TODO: insert footer stuff
+    
+    return '<br><br><div style="height: 1px;width: 100%;background-color: #FFF6"></div><br><sub>Designed by Xabblll<br>Legal information</sub><div class="footer"></div>';
 }
