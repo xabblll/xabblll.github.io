@@ -1,27 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Xabblll's Site</title>
-</head>
-<body>
-<!--    <h1>Useful links</h1>-->
-    <p id="recent posts"></p>
-</body>
-</html>
+---
+layout: default
+title: Home
+---
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/manifest.js"></script>
-<script src="js/mainScripts.js"></script>
-<script>
-    let manifest = getManifest();
-    let html = '<h2>Recent</h2>';
-    for(let i = manifest.length - 1, j = 0; i >= 0 && j < 3; i--, j++)
-    {
-        let item = manifest[i];
-        html += '<li><a href="'+item.path+'">' + item.name + '</a></li>';
-    }
+<h2>Latest Posts</h2>
+
+{% for post in site.posts %}
+
+    <a style="text-decoration: none"  href="{{ post.url }}"><h2>{{ post.title }}</h2>
+    <div class="postThumbs">
+        {% if post.image %}
+            <img src="{{ post.image }}" alt="PostImage">
+        {% else %}
+            <img src="https://cdn.rebrickable.com/media/thumbs/mocs/moc-43584.jpg/1000x800.jpg" alt="DefaultPostImage">
+        {% endif %}
     
-    document.getElementById("recent posts").innerHTML = html;
-</script>
+    {{ post.excerpt }}
+    </div></a>
 
+{% endfor %}
+
+<!--{% if paginator.total_pages > 1 %}-->
+<!--<div class="pagination">-->
+<!--    {% if paginator.previous_page %}-->
+<!--        <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>-->
+<!--    {% else %}-->
+<!--        <span>&laquo; Prev</span>-->
+<!--    {% endif %}-->
+<!--    -->
+<!--    -->
+<!--    {% for page in (1..paginator.total_pages) %}-->
+<!--        {% if page == paginator.page %}-->
+<!--            <em>{{ page }}</em>-->
+<!--        {% elsif page == 1 %}-->
+<!--            <a href="{{ '/' | relative_url }}">{{ page }}</a>-->
+<!--        {% else %}-->
+<!--            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>-->
+<!--        {% endif %}-->
+<!--    {% endfor %}-->
+
+<!--    {% if paginator.next_page %}-->
+<!--    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>-->
+<!--    {% else %}-->
+<!--    <span>Next &raquo;</span>-->
+<!--    {% endif %}-->
+<!--</div>-->
+<!--{% endif %}-->
+
+
+<div id="postDisplay"> Display :( </div>
+
+<script>
+
+    // Build posts
+    const posts = [{% for post in site.posts %}
+        {
+            title:"{{ post.url }}", 
+            url:"{{ post.title }}",
+            date: "{{ post.date }}",
+        }
+        {% unless forloop.last %},{% endunless %} //Add ',' if it's not last item
+    {% endfor %}]
+    
+    
+
+    console.log(posts);
+    // console.log(posts);
+    
+</script>
