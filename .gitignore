@@ -1,2 +1,14 @@
 /.idea/
 Backup
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+
+# optional for macs:
+**/.DS_Store
+__Backup
+.DS_Store
