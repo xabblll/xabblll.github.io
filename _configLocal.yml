@@ -51,8 +51,8 @@ show_dir_listing    : false
 
 # Outputting
 permalink           : /:categories/:title
-#paginate_path       : /:num
-#paginate            : 2
+paginate_path       : /:num
+paginate            : 2
 #timezone            : Asia/Tbilisi
 
 quiet               : false
@@ -69,7 +69,7 @@ kramdown:
 #  auto_ids          : true
 #  entity_output     : as_char
 #  toc_levels        : [1, 2, 3, 4, 5, 6]
-  smart_quotes      : lsquo,rsquo,ldquo,rdquo
+#  smart_quotes      : lsquo,rsquo,ldquo,rdquo
 #  input             : GFM
 #  hard_wrap         : false
 #  footnote_nr       : 1
