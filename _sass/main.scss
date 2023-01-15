@@ -21,7 +21,7 @@
 {
   position: fixed;
   width: 100%;
-  height: 64px;
+  height: 4rem;
   top: 0;
   left: 0;
   background-color: #0003;
@@ -47,9 +47,9 @@
   vertical-align: middle;
   display: table-cell;
   height: inherit;
-  width: 160px;
+  width: 10rem;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-family: "Helvetica Neue", serif;
   font-weight: normal;
   letter-spacing: 1.5px;
@@ -135,6 +135,7 @@ hr
 html,h1,h2,h3,h4,h5,h6,strong
 {
   color: #FFF;
+  //word-wrap: normal;
 }
 
 p, li, a, u, b,
