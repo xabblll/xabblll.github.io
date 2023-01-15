@@ -6,28 +6,85 @@
 
 .postThumbTitle
 {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  text-align: center;
+  font-size: 4rem;
+  line-height: 4.5rem;
+  text-align: left;
+  filter: drop-shadow(0px 0px 20px black);
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  //background: linear-gradient(top, #000F, #0000);
+  height: 3rem;
+  width: 100%;
+  //background-image: linear-gradient(top, #000F, #0000);
+  //background-size: 100%;
+  //background-image: linear-gradient(90deg, #0007, #0000);
+  //backdrop-filter: blur(5px);
+  //-webkit-backdrop-filter: blur(5px);
+}
+
+.postThumbDescription
+{
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: normal;
+  text-align: left;
+  filter: drop-shadow(0px 0px 10px black);
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
 }
 
 .postThumbRoot
 {
   display: block;
+  cursor: pointer;
+  text-align: left;
   //max-width: 100%;
   //border: 2px solid red;
-  max-height: 600px;
+  min-width: 400px;
+  max-width: 100%;
+  height: 240px;
+  //background-size: 110%;
+  background: radial-gradient(circle at 20px 20px,
+          #8c2e05 -5%, 
+          #0b94be 120%);
+
+  background-color: #545454;
+  //background-image: url("/assets/images/someBG.png");
+  background-position: center;
+  background-size: 100%;
   overflow: clip;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  border: 0.13rem solid black;
+
+
+}
+
+.postThumbRoot:hover
+{
+  border: 0.13rem solid white;
 }
 
 .postThumb
 {
-  display: inline;
+  display: block;
   text-align: center;
   margin-bottom:2rem;
   text-decoration: none;
-
 }
+
+.postThumb img
+{
+  display: flow;
+  border-radius: 0;
+}
+
 .postThumb h1
 {
   font-size: var(--postThumbHeaderSize);
@@ -62,12 +119,5 @@
   font-size: var(--postThumbHeaderSize);
   line-height: var(--postThumbHeaderLine);
 
-}
-.postThumb img
-{
-  display: inline-block;
-  //margin: 0.2rem;
-  //border: 1px solid magenta;
-  border-radius: 0;
 }
 

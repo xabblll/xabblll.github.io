@@ -66,12 +66,23 @@ body
   margin: 0;
   width: 100%;
   height: 100%;
-  background:
-          radial-gradient(ellipse at top, #765, #311),
-          radial-gradient(ellipse at bottom, #111, #311);
+  //background:
+  //        radial-gradient(ellipse at top, #725656, transparent),
+  //        radial-gradient(ellipse at bottom, #361f1f, transparent);
+
+  //background:
+          //linear-gradient(90deg, #FFF, #222 30%, #222 70%, #FFF);
+          //radial-gradient(ellipse at top, #888, #666),
+          //radial-gradient(ellipse at bottom, #888, #666);
+  //background: linear-gradient(to right, rgba(0,0,0,0), rgba(0, 0, 0, 0)), url(https://grainy-gradients.vercel.app/noise.svg);
+  
+  // background with image
+  //background-image: url("/assets/images/someBG.png");
+  //background-size: 100%;
+  
   background-attachment: fixed;
-  background-color: #171717;
-  -webkit-font-smoothing: antialiased;
+  background-color: #000;
+  //-webkit-font-smoothing: antialiased;
 }
 
 .pageContent
@@ -87,9 +98,12 @@ body
   font-family: "JetBrains Mono", monospace;
 
   ////Background
-  background-color: #30303088;
-  border-right: 1px solid #FFF2;
-  border-left:  1px solid #FFF2;
+  //background-color: rgba(17, 17, 17, 255);
+  //background:
+  //linear-gradient(90deg, #0003, #222A 50%, #222A 50%, #0003);
+  
+  //border-right: 1px solid #FFF2;
+  //border-left:  1px solid #FFF2;
 }
 
 .pageContentInner

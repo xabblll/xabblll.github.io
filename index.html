@@ -3,6 +3,10 @@ layout: default
 title: Home
 ---
 <div id="displayTechart"></div>
+<br>
+<br>
+<br>
+<br>
 <div id="displayDevlog"></div>
 
 <script>
@@ -16,29 +20,36 @@ title: Home
             categories: "{{ post.categories }}",
             tags: "{{ post.tags }}",
             image: "{{ post.image }}",
-            excerpt: '{{ post.excerpt | jsonify}}'
+            // excerpt: '{{ post.excerpt | jsonify}}',
+            excerpt: "{{ post.description}}",
         }{% unless forloop.last %},{% endunless %}
     {% endfor %}]
     
     // Fix jsonify excessive quotes
-    for (let i = 0; i < posts.length; i++) {
-        posts[i].excerpt = posts[i].excerpt.slice(0, -1).slice(1);
-    }
+    // for (let i = 0; i < posts.length; i++) {
+    //     posts[i].excerpt = posts[i].excerpt.slice(0, -1).slice(1);
+    // }
     
     //  ================= Methods ================== //
     //
     function generatePostHtml(post, displayClass, displayTitle)
     {
-        let html = '<div class="postThumbRoot"><a style="text-decoration: none;" href=' + post.url + '><h2 class="'+displayTitle+'">' + post.title + '</h2><div class="' + displayClass + '">';
+        let html = '<a class="postThumbRoot" href=' + post.url;
         if(post.image !== "")
         {
-            html += '<img src="' + post.image + '"alt="PostImage">';
+            //html += '<img src="' + post.image + '"alt="PostImage">';
+            html += ' style="background-image: url(' + post.image + ');"'
+        }
+        html += '><h2 class="'+displayTitle+'">' + post.title + '</h2>';
+        if(post.image !== "")
+        {
+            //html += '<img src="' + post.image + '"alt="PostImage">';
         }
         else
         {
             //html += '<div style="width: 100px; height: 100px; background-color: #FF00FF; margin-top:1rem;margin-bottom:1rem;margin-left: auto;margin-right: auto;"></div>';
         }
-        html += post.excerpt + '</div></a></div>';
+        html += '<h2 class="postThumbDescription">'+post.excerpt + '</h2></a>';
         return html;
     }
     
@@ -65,23 +76,6 @@ title: Home
     document.getElementById("displayTechart").innerHTML = detCategoryHtml("techart");
     document.getElementById("displayDevlog").innerHTML = detCategoryHtml("devlog");
     
+    console.log(posts);
     
 </script>
-
-<!--Todo:Delette-->
-<!--<h2>Latest Posts</h2>-->
-
-<!--{% for post in site.posts %}-->
-
-<!--    <a style="text-decoration: none"  href="{{ post.url }}"><h2>{{ post.title }}</h2>-->
-<!--    <div class="postThumbs">-->
-<!--        {% if post.image %}-->
-<!--            <img src="{{ post.image }}" alt="PostImage">-->
-<!--        {% else %}-->
-<!--            <img src="https://cdn.rebrickable.com/media/thumbs/mocs/moc-43584.jpg/1000x800.jpg" alt="DefaultPostImage">-->
-<!--        {% endif %}-->
-<!--    -->
-<!--    {{ post.excerpt }}-->
-<!--    </div></a>-->
-
-<!--{% endfor %}-->
