@@ -1,0 +1,73 @@
+:root {
+  --postThumbHeaderSize: 1.5rem;
+  --postThumbHeaderLine: 2rem;
+  --blue: #00b;
+}
+
+.postThumbTitle
+{
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.postThumbRoot
+{
+  display: block;
+  //max-width: 100%;
+  //border: 2px solid red;
+  max-height: 600px;
+  overflow: clip;
+}
+
+.postThumb
+{
+  display: inline;
+  text-align: center;
+  margin-bottom:2rem;
+  text-decoration: none;
+
+}
+.postThumb h1
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+}
+.postThumb h2
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+
+}
+.postThumb h3
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+
+}
+.postThumb h4
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+
+}
+.postThumb h5
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+
+}
+.postThumb h6
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+
+}
+.postThumb img
+{
+  display: inline-block;
+  //margin: 0.2rem;
+  //border: 1px solid magenta;
+  border-radius: 0;
+}
+

@@ -1,12 +1,11 @@
 ---
-layout: default
-title: Vladimir Kurkin
+layout: post
 ---
 # Vladimir Kurkin
 ## xabblll
 
 
-![Avatar](https://i.pinimg.com/736x/5e/1c/f3/5e1cf347654d865044cc7f262640b3b9.jpg "I don't like sand..."){:.textImg}
+![Avatar](https://i.pinimg.com/736x/5e/1c/f3/5e1cf347654d865044cc7f262640b3b9.jpg "I don't like sand..."){:.circleImage}
 
 This page tells you a little bit about me and maybe something about podracing.
 

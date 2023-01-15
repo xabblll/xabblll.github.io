@@ -1,12 +1,31 @@
----
-layout: default
----
-<div style="height: 1rem"></div>
-<h1>{{ page.title }}</h1>
-<div style="height: 3rem"></div>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/postStyles.css">
+</head>
+<body>
+{% include navigation.html %}
+<div class="pageContent">
+    <div class="pageContentInner">
+        <div style="height: 1rem"></div>
+        <h1>{{ page.title }}</h1>
+        <div style="height: 3rem"></div>
 
-{{ content }}
+        {{ content }}
 
-<div style="height: 3rem"></div>
-<!--<hr>-->
-<!--<sub>Date Created: {{ page.date | date: '%B %d, %Y'}}</sub>-->
+        <div style="height: 3rem"></div>
+        <br><br>
+        <div style="height: 1px;width: 100%;background-color: #FFF6"></div>
+        <br>
+        <sub>
+            Designed by Xabblll<br>
+            Very Legal information
+        </sub>
+        <div style="height: 42px"></div>
+
+    </div>
+</div>
+</body>
+</html>

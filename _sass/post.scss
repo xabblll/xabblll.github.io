@@ -1,0 +1,85 @@
+:root {
+  --blue: #00b;
+}
+
+h1
+{
+  font-size: 10rem;
+  line-height: 9rem;
+  text-transform: initial;
+}
+h2
+{
+  font-size: 3rem;
+  line-height: 4rem;
+}
+h3
+{
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+h4
+{
+  font-size: 2rem;
+  line-height: 3rem;}
+h5
+{
+  font-size: 1.5rem;
+  line-height: 2.5rem;}
+h6
+{
+  font-size: 1.25rem;
+  line-height: 2.25rem;}
+
+.cc
+{
+  text-align: center;
+}
+
+img
+{
+  display: flex;
+  text-align: center;
+  
+  max-width: 100%;
+  min-width: 17rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.circleImage
+{
+  text-align: center;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+blockquote
+{
+  font-family: "Helvetica", monospace;
+  font-style: italic;
+  background-color: #171717BB;
+  background-size: auto 3em;
+  background-position-y: 0.625rem;
+  border-left: 0.25rem solid rgba(64,196,255,128);
+  padding: 0.05rem;
+
+}
+blockquote p
+{
+  color: #FBAB;
+  margin: 0.5rem;
+  padding: 0.625rem;
+}
+
+hr.small {
+  max-width: 6.25rem;
+  margin: 1rem auto;
+  border-width: 0.25rem;
+  border-color: inherit;
+  border-radius: 0.1875rem;
+}

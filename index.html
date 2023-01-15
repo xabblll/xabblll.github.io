@@ -29,7 +29,17 @@ title: Home
     //
     function generatePostHtml(post, displayClass, displayTitle)
     {
-        return '<a style="text-decoration: none" href=' + post.url + '><h2 class="'+displayTitle+'">' + post.title + '</h2><div class="' + displayClass + '"><img src="' + post.image + '"alt="PostImage">' + post.excerpt + '</div></a>';
+        let html = '<div class="postThumbRoot"><a style="text-decoration: none;" href=' + post.url + '><h2 class="'+displayTitle+'">' + post.title + '</h2><div class="' + displayClass + '">';
+        if(post.image !== "")
+        {
+            html += '<img src="' + post.image + '"alt="PostImage">';
+        }
+        else
+        {
+            //html += '<div style="width: 100px; height: 100px; background-color: #FF00FF; margin-top:1rem;margin-bottom:1rem;margin-left: auto;margin-right: auto;"></div>';
+        }
+        html += post.excerpt + '</div></a></div>';
+        return html;
     }
     
     function getPostsHtml(filter, displayClass, displayTitle)
@@ -42,11 +52,18 @@ title: Home
         }
         return html;
     }
+    
+    function detCategoryHtml(category)
+    {
+        let html = '<h1>'+category+'</h1>';
+        html += getPostsHtml((p)=>p.categories===category, "postThumb", "postThumbTitle");
+        return html;
+    }
 
     //  ================ Script =================== //
 
-    document.getElementById("displayTechart").innerHTML = getPostsHtml((p)=>p.categories==="techart", "postThumb", "postThumbTitle");
-    document.getElementById("displayDevlog").innerHTML = getPostsHtml((p)=>p.categories==="devlog", "postThumb", "postThumbTitle");
+    document.getElementById("displayTechart").innerHTML = detCategoryHtml("techart");
+    document.getElementById("displayDevlog").innerHTML = detCategoryHtml("devlog");
     
     
 </script>
