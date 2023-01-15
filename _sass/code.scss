@@ -1,17 +1,22 @@
 code {
-  font-family: "Helvetica", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: normal;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   padding: 0.125rem 0.25rem;
   color: #F0EFE0;
   background-color: #171717BB;
   border-radius: 0.25rem;
+  //padding: ;
 }
 
 pre code {
-  padding: 0;
+  //background-color: yellow;
+  padding-inline: 0;
   background-color: transparent;
   border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 pre {
@@ -20,26 +25,27 @@ pre {
   line-height: 1.5rem;
   border-radius: 0.25rem;
   padding: 0.59375rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .highlight
 {
   margin-left: 2rem;
   margin-right: 2rem;
-  //width: fit-content;
-  //width: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-  //margin: 0;
 }
 
 .highlight pre {
-  //margin-right: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  //margin-top: 1rem;
+  //margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
   border: none;
   background: none;
   overflow:scroll;
+
 }
 .highlight > pre {
   text-align: left;
@@ -50,7 +56,13 @@ pre {
   border-left: 0.4375rem solid #F0EFE099;
 }
 .highlight > pre:not([class~="highlight"]) { /* code block with line number */
-  padding: 0;
+  //padding: 1rem;
+  //padding: 1rem;
+  //padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+
 }
 .highlight table,
 .highlight tr,
@@ -61,10 +73,19 @@ pre {
   margin: 0;
 }
 .highlight pre.lineno {
-  //color: rgba(0,0,0,0.3);
-  color: #F0EFE077;
+  color: #F0EFE034;
   border-radius: 0;
-  border-right: 2px solid #F0EFE033;
+  border-right: 2px solid #F0EFE017;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.td.code
+{
+  padding-inline: 0;
+  padding: 0;
+  margin: 0;
 }
 
 /* Make line numbers unselectable: excludes line numbers from copy-paste user ops */

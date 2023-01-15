@@ -1,7 +1,14 @@
+:root {
+  --postThumbHeaderSize: 1.5rem;
+  --postThumbHeaderLine: 2rem;
+  --blue: #00b;
+}
+
 .centered
 {
   text-align: center;
   vert-align: middle;
+  
 }
 
 .headerMenuItem
@@ -244,22 +251,51 @@ hr.small {
   border-radius: 0.1875rem;
 }
 
-.postThumbs
+.postThumbTitle
+{
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.postThumb
 {
   display: block;
   text-align: center;
   margin-bottom:2rem;
-  //border: 1px solid white;
-  
+  text-decoration: none;
 }
-
-.postThumbs h1,h2,h3,h4,h5,h6
+.postThumb h1
 {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
 }
-
-.postThumbs img
+.postThumb h2
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+}
+.postThumb h3
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+}
+.postThumb h4
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+}
+.postThumb h5
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+}
+.postThumb h6
+{
+  font-size: var(--postThumbHeaderSize);
+  line-height: var(--postThumbHeaderLine);
+}
+.postThumb img
 {
   margin:0;
   display: inline;
@@ -304,9 +340,4 @@ hr.small {
 //.blog-post blockquote p:last-child {
 //  margin-bottom: 0;
 //}
-
-.pagination
-{
-  
-}
 

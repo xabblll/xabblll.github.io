@@ -2,12 +2,12 @@
 layout: default
 title: Home
 ---
-
-<div id="displayTechart"> Display :( </div>
+<div id="displayTechart"></div>
+<div id="displayDevlog"></div>
 
 <script>
-
-    // Build posts data
+    //  =============== Manifest =================== //
+    
     const posts = [{% for post in site.posts %}
         {
             title: "{{ post.title }}", 
@@ -19,24 +19,34 @@ title: Home
             excerpt: '{{ post.excerpt | jsonify}}'
         }{% unless forloop.last %},{% endunless %}
     {% endfor %}]
-    console.log(posts);
     
-    
-    // Display TechArt posts
-    let techartPosts = posts.filter((p)=>p.categories==="techart");
-    let techartHtml = "";
-    for (let i = 0; i < posts.length; i++)
-    {
-        let post = posts[i];
-        let excerpt = post.excerpt.slice(0, -1).slice(1);
-        
-        let postHtml =
-        '<a style="text-decoration: none" href=' + post.url + '><h2>' + post.title + '</h2><div className="postThumbs"><img src="' + post.image + '"alt="PostImage">' + excerpt + '</div></a>';
-        console.log(postHtml);
-        techartHtml += postHtml;
-
+    // Fix jsonify excessive quotes
+    for (let i = 0; i < posts.length; i++) {
+        posts[i].excerpt = posts[i].excerpt.slice(0, -1).slice(1);
     }
-    document.getElementById("displayTechart").innerHTML = techartHtml;
+    
+    //  ================= Methods ================== //
+    //
+    function generatePostHtml(post, displayClass, displayTitle)
+    {
+        return '<a style="text-decoration: none" href=' + post.url + '><h2 class="'+displayTitle+'">' + post.title + '</h2><div class="' + displayClass + '"><img src="' + post.image + '"alt="PostImage">' + post.excerpt + '</div></a>';
+    }
+    
+    function getPostsHtml(filter, displayClass, displayTitle)
+    {
+        let filteredPosts = posts.filter(filter);
+        let html = "";
+        for (let i = 0; i < filteredPosts.length; i++)
+        {
+            html += generatePostHtml(filteredPosts[i], displayClass, displayTitle);
+        }
+        return html;
+    }
+
+    //  ================ Script =================== //
+
+    document.getElementById("displayTechart").innerHTML = getPostsHtml((p)=>p.categories==="techart", "postThumb", "postThumbTitle");
+    document.getElementById("displayDevlog").innerHTML = getPostsHtml((p)=>p.categories==="devlog", "postThumb", "postThumbTitle");
     
     
 </script>
