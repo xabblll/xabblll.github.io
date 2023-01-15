@@ -1,7 +1,7 @@
 ---
 layout: post
 ---
-##Magic  
+## Magic  
 
 This page was created from Github repo, without using any local editors and git clients  
 
