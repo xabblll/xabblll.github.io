@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: about
 ---
 # Vladimir Kurkin
 ## xabblll

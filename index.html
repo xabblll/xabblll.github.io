@@ -21,12 +21,12 @@ title: Xabblll - Home
             categories: "{{ post.categories }}",
             tags: "{{ post.tags }}",
             image: "{{ post.image }}",
-            // excerpt: '{{ post.excerpt | jsonify}}',
-            excerpt: "{{ post.description}}"
+            description: '{{ post.description}}',
+            // excerpt: '{{ post.excerpt | jsonify}}'
         }{% unless forloop.last %},{% endunless %}
     {% endfor %}];
     
-    // Fix jsonify excessive quotes
+    // //Fix jsonify excessive quotes
     // for (let i = 0; i < posts.length; i++) {
     //     posts[i].excerpt = posts[i].excerpt.slice(0, -1).slice(1);
     // }
@@ -57,34 +57,38 @@ title: Xabblll - Home
         }
     })();
     
-    function generatePostHtml(post, displayClass, displayTitle)
+    function generatePostHtml(post)
     {
-        let html = '<a class="postThumbRoot" href=' + post.url;
+        let html = '<a class="postThumb" href=' + post.url + '>';
+        // if(post.image !== "")
+        // {
+        //     //html += '<img src="' + post.image + '"alt="PostImage">';
+        //     html += ' style="background-image: url(' + post.image + ');"'
+        // }
         if(post.image !== "")
         {
-            //html += '<img src="' + post.image + '"alt="PostImage">';
-            html += ' style="background-image: url(' + post.image + ');"'
-        }
-        html += '><h2 class="'+displayTitle+'">' + post.title + '</h2>';
-        if(post.image !== "")
-        {
-            //html += '<img src="' + post.image + '"alt="PostImage">';
+            html += '<img src="' + post.image + '"alt="PostImage" class="postThumbImage">';
         }
         else
         {
-            //html += '<div style="width: 100px; height: 100px; background-color: #FF00FF; margin-top:1rem;margin-bottom:1rem;margin-left: auto;margin-right: auto;"></div>';
+            html += '<img src="/assets/images/someBG.png" alt="PostImage" class="postThumbImage">';
+
+            // html += '<div style="width: 100px; height: 100px; background-color: #FF00FF; margin-top:1rem;margin-bottom:1rem;margin-left: auto;margin-right: auto;"></div>';
         }
-        html += '<h2 class="postThumbDescription">'+post.excerpt + '</h2></a>';
+        html += '<h2 class="postThumbTitle">' + post.title + '</h2>';
+        html += '<p class="postThumbDescription">' + post.description + '</p></a>';
         return html;
     }
     
-    function getPostsHtml(postsToShow, displayClass, displayTitle)
+    function getPostsHtml(postsToShow)
     {
         let html = "";
+        html += '<div class="postThumbRoot">';
         for (let i = 0; i < postsToShow.length; i++)
         {
-            html += generatePostHtml(postsToShow[i], displayClass, displayTitle);
+            html += generatePostHtml(postsToShow[i]);
         }
+        html += '</div>';
         return html;
     }
     
@@ -92,12 +96,13 @@ title: Xabblll - Home
     {
         let html = '<h1>'+category+'</h1>';
         let categoryPosts = posts.filter((p)=>p.categories===category);
+        let numberOfPosts = 2;
         categoryPosts = categoryPosts.sortBy(function (o){return -o.date });
-        if(categoryPosts.length > 4)
+        if(categoryPosts.length > numberOfPosts)
         {
-            categoryPosts = categoryPosts.slice(0,4);
+            categoryPosts = categoryPosts.slice(0, numberOfPosts);
         }
-        html += getPostsHtml(categoryPosts, "postThumb", "postThumbTitle");
+        html += getPostsHtml(categoryPosts);
         return html;
     }
     

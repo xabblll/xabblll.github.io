@@ -7,14 +7,13 @@
 </head>
 <body>
 {% include navigation.html %}
-<img style="width: 1200px; margin: auto;" src="{{ page.image }}" alt="">
+<div id="fullpage"><h5 style="text-align: right; margin-top:1rem; margin-right: 2rem">Click to Exit</h5></div>
 <div class="pageContent">
     <div class="pageContentInner">
         <h1>{{ page.title }}</h1>
-<!--        <div style="height: 3rem"></div>-->
+        <img style="width: 1200px; margin: auto;" src="{{ page.image }}" alt="">
 
         {{ content }}
-
         <div style="height: 3rem"></div>
         <br><br>
         <div style="height: 1px;width: 100%;background-color: #FFF6"></div>
@@ -24,8 +23,31 @@
             Very Legal information
         </sub>
         <div style="height: 42px"></div>
-
     </div>
 </div>
 </body>
+<script>
+    // function getPics() {} //just for this demo
+    const imgs = document.querySelectorAll('img');
+    const fullPage = document.querySelector('#fullpage');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', function() {
+            fullPage.style.backgroundImage = 'url(' + img.src + ')';
+            fullPage.style.display = 'block';
+        });
+    });
+    
+    fullPage.addEventListener('click', function (){
+        fullPage.style.display = 'none';
+    })
+    
+    // // Background color change
+    // const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    // const body = document.getElementsByTagName('body')[0];
+    // body.style.backgroundAttachment = 'fixed';
+    // body.style.backgroundSize = "100% 100%";
+    // body.style.background = 'radial-gradient(ellipse at top, #'+ randomColor +', #202020), radial-gradient(ellipse at bottom, #808080, #202020)';
+    //
+</script>
 </html>

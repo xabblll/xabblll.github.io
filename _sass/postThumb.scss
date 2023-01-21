@@ -1,92 +1,89 @@
 :root {
-  --postThumbHeaderSize: 1.5rem;
+  --postThumbHeaderSize: 1.666rem;
   --postThumbHeaderLine: 2rem;
   --blue: #00b;
 }
 
 .postThumbTitle
 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 2.5rem;
-  text-align: center;
+  text-align: left;
   //filter: drop-shadow(0px 0px 20px black);
-  padding-top: 0.5rem;
-  //padding-left: 1rem;
-  //padding-right: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-bottom: 0;
-  //background: linear-gradient(top, #000F, #0000);
-  height: 3rem;
   width: 100%;
-  //background-image: linear-gradient(top, #000F, #0000);
-  background-size: 100%;
-  //background-image: linear-gradient(0deg, #0000, #0009);
-  //backdrop-filter: blur(5px);
-  //-webkit-backdrop-filter: blur(5px);
-  background-color: #0008;
-
 }
 
 .postThumbDescription
 {
   font-size: 1.2rem;
   line-height: 2rem;
-  font-weight: normal;
-  //filter: drop-shadow(0px 0px 10px black);
-  padding-top: 0;
-  padding-left: 1rem;
+  text-align: left;
+  padding-top: 1rem;
   padding-right: 1rem;
+  padding-left: 1rem;
   padding-bottom: 1rem;
-  height: 100%;
-
-  background-size: 100%;
-  background-color: #0008;
-  //background-image: linear-gradient(180deg, #0004, #0008);
-
 }
 
 .postThumbRoot
 {
-  display: inline-block;
-  cursor: pointer;
-  text-align: left;
-  //max-width: 100%;
-  //border: 2px solid red;
-  width: 450px;
-  height: 300px;
-  background-size: 150%;
-  //background: radial-gradient(circle at 20px 20px,
-  //        #8c2e05 -5%, 
-  //        #0b94be 120%);
-
-  background-color: #545454;
-  //background-image: url("/assets/images/someBG.png");
-  background-position: center;
-  overflow: clip;
-
-  //border-radius: 1rem;
-  text-decoration: none;
-  border: 1px solid black;
-  margin: 0.5rem 0.5rem 0.4rem;
+  display: flex;
+  flex-direction: row;
 }
 
-.postThumbRoot:hover
-{
-  border: 1px solid white;
-}
+
 
 .postThumb
 {
   display: block;
-  text-align: center;
-  margin-bottom:2rem;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  height: 520px;
+  background-color: #232323;
+  background-position: center;
+  overflow: clip;
+
+  border-radius: 0.5rem;
   text-decoration: none;
+  margin: 0.0rem 1.0rem 0.4rem;
 }
 
-.postThumb img
+.postThumbImage
 {
-  display: flow;
-  border-radius: 0;
+  display: block;
+  border: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
+
+.postThumb:hover
+{
+  scale: 105%;
+  transition-duration: 0.2s;
+}
+
+.postThumb
+{
+  scale: 100%;
+  transition-duration: 0.2s;
+}
+
+//.postThumb img
+//{
+//  display: flow;
+//  border-radius: 0;
+//}
 
 .postThumb h1
 {
