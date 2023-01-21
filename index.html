@@ -22,14 +22,8 @@ title: Xabblll - Home
             tags: "{{ post.tags }}",
             image: "{{ post.image }}",
             description: '{{ post.description}}',
-            // excerpt: '{{ post.excerpt | jsonify}}'
         }{% unless forloop.last %},{% endunless %}
     {% endfor %}];
-    
-    // //Fix jsonify excessive quotes
-    // for (let i = 0; i < posts.length; i++) {
-    //     posts[i].excerpt = posts[i].excerpt.slice(0, -1).slice(1);
-    // }
     
     //  ================= Methods ================== //
 
@@ -60,20 +54,14 @@ title: Xabblll - Home
     function generatePostHtml(post)
     {
         let html = '<a class="postThumb" href=' + post.url + '>';
-        // if(post.image !== "")
-        // {
-        //     //html += '<img src="' + post.image + '"alt="PostImage">';
-        //     html += ' style="background-image: url(' + post.image + ');"'
-        // }
         if(post.image !== "")
         {
             html += '<img src="' + post.image + '"alt="PostImage" class="postThumbImage">';
         }
         else
         {
+            // TODO: add default image for each category
             html += '<img src="/assets/images/someBG.png" alt="PostImage" class="postThumbImage">';
-
-            // html += '<div style="width: 100px; height: 100px; background-color: #FF00FF; margin-top:1rem;margin-bottom:1rem;margin-left: auto;margin-right: auto;"></div>';
         }
         html += '<h2 class="postThumbTitle">' + post.title + '</h2>';
         html += '<p class="postThumbDescription">' + post.description + '</p></a>';

@@ -4,3 +4,92 @@ title: Library
 ---
 <h1>Library</h1>
 
+<div id="postsCollection"></div>
+
+<div style="display: flex; margin: auto; flex-direction: row;">
+    <button id="buttonPrev" style="padding: 1rem;margin: auto;background-color: #111111;" onclick="prevPage()"><h2><<</h2></button>
+    <button id="buttonNext" style="padding: 1rem;margin: auto;background-color: #111111;" onclick="nextPage()"><h2>>></h2></button>
+</div>
+
+<script>
+    // Manifest
+    const posts = [{% for post in site.posts %}
+    {
+        title: "{{ post.title }}",
+            url: "{{ post.url }}",
+        date: "{{ post.date }}",
+        categories: "{{ post.categories }}",
+        tags: "{{ post.tags }}",
+        image: "{{ post.image }}",
+        description: '{{ post.description}}',
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}];
+
+    const postsCollection = document.getElementById("postsCollection");
+    const postsPerPage = 12;
+    const lastPage = posts.length / postsPerPage - 1;
+    let currentPage = 0;
+    
+    // Builder
+
+    function generatePostHtml(post)
+    {
+        let html = '<a class="postThumbLibrary" href=' + post.url + '>';
+        // if(post.image !== "")
+        // {
+        //     html += '<img src="' + post.image + '"alt="PostImage" class="postThumbImage">';
+        // }
+        // else
+        // {
+        //     html += '<img src="/assets/images/someBG.png" alt="PostImage" class="postThumbImage">';
+        // }
+        html += '<h5 style="padding: 1rem; display: flex;">' + post.title + '<p style="padding-left: 1rem; font-size: 1rem; line-height: 1.2rem;vertical-align: middle;margin-top: auto;margin-bottom: auto;">' + post.description + '</p></h5>';
+        // html += '<p class="postThumbDescription">' + post.description + '</p></a>';
+        return html;
+    }
+
+    
+    function updateCollection()
+    {
+        let html = "";
+
+        for (let i = 0; i < postsPerPage; i++)
+        {
+            let postIndex = currentPage * postsPerPage + i;
+            if(postIndex >= posts.length)
+            {
+                break;
+            }
+            html += generatePostHtml(posts[postIndex]);
+        }
+        postsCollection.innerHTML = html;
+    }
+    
+    function changePage(page)
+    {
+        page = Math.max(0, page);
+        page = Math.min(lastPage, page);
+        if(currentPage === page)
+        {
+            return;
+        }
+        currentPage = page;
+        updateCollection();
+    }
+
+    function prevPage()
+    {
+        changePage(currentPage - 1);
+    }
+    
+    function nextPage()
+    {
+        changePage(currentPage + 1);
+    }
+    
+    // Script
+    
+    updateCollection();
+    
+    
+</script>

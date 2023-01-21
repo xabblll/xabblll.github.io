@@ -1,8 +1,8 @@
 ---
 layout: post
 permalink: about
+title: Vladimir Kurkin
 ---
-# Vladimir Kurkin
 ## xabblll
 
 
