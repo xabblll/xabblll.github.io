@@ -3,24 +3,60 @@ layout: post
 permalink: about
 title: Vladimir Kurkin
 ---
-## xabblll
+## a.k.a. Xabblll
+
+![Thats me](/assets/images/aboutPhoto.jpg "Thats me"){:.circleImage}
 
 
-![Avatar](https://i.pinimg.com/736x/5e/1c/f3/5e1cf347654d865044cc7f262640b3b9.jpg "I don't like sand..."){:.circleImage}
+Technical Artist / Indie Game Develop in spare time.  
+Joined gamedev industry in 2012, and professionally in 2016.
 
-This page tells you a little bit about me and maybe something about podracing.
+I made this site to share my Tech Art tricks, Devlogs and other gamedev related stuff.
 
 
-Александр Модуль просыпается в собственной квартире 3 апреля 1989 года под звук автоответчика.
-На автоответчике записано сообщение, в котором его просят принять доставленную ему коробку с печеньем
-и «внимательно прочитать их состав». В коробке он находит счет-фактуру, а также акт выполненных работ
-на добычу таинственного чемодана в определённом здании и убийство всех в нём присутствующих.
+<br>
+<br>
 
-Во время очередного бизнес-ланча в "Дорсии" Модулю приходит сообщение, в котором его просят приехать в
-офис местной телефонной компании. По приезду он обнаруживает, что здание наполнено трупами офисных работников,
-а в файлах компании роется таинственный байкер (Андрей Митрошин). Между ними происходит схватка, и с этого
-момента происходящие события делятся на две сюжетных линии.
+## Gamedev skills
+<br>
 
-Бизнесмен – мелодии для озвучивания презентаций Powerpoint.
-Бизнес-перспектива 1993.
-Лучший эффект достигается при прослушивании на музыкальном центре.
+#### Main
+
+- Unity generalist
+- Game prototyping
+- Code
+  - Runtime C#
+  - Shaders
+  - Tools
+- Optimization
+  - Code
+  - Graphics
+  - Assets
+  - Pipelines
+- Can do things fast
+
+<br>
+
+#### Other
+
+- 3D
+  - Modelling
+  - Texturing
+  - Skinning & Rigging
+  - Animation
+- Sound
+  - Audio engineering
+  - Music composing
+  - Procedural audio
+- Game Design
+  - Gameplay
+  - Level Design
+  - UI/UX
+  - Audio Design
+- 2D
+  - UI
+  - Concept Art
+- Other & Rusty stuff
+  - Coding in C/C++
+  - Playing Cello and Piano
+  - Web (not, haha)

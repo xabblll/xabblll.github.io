@@ -114,7 +114,7 @@ body
 html,h1,h2,h3,h4,h5,h6,p,a,li,u,b,sub,strong
 {
   font-family: "Helvetica", monospace;
-  color: #FFFB;
+  color: #FFFA;
   text-align: left;
   padding: 0;
   margin: 0;
@@ -137,6 +137,7 @@ html,h1,h2,h3,h4,h5,h6,strong
 p, li, a, u, b,
 {
   font-size: 1.2rem;
+  line-height: 2rem;
   //display: flex;
   margin-bottom: 1.42rem;
 }
@@ -157,7 +158,7 @@ h1
 {
   font-size: 8rem;
   line-height: 9rem;
-  text-transform: uppercase;
+  //text-transform: uppercase;
 }
 h2
 {
@@ -204,7 +205,7 @@ img
 sub
 {
   font-family: "Arial", monospace;
-  letter-spacing: 2px;
+  letter-spacing: 1.42px;
 }
 
 .footer

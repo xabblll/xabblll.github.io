@@ -2,7 +2,7 @@
 layout: default
 title: Xabblll - Home
 ---
-<h2>Latest</h2>
+<h1>/</h1>
 <div id="displayTechart"></div>
 <br>
 <br>
@@ -80,10 +80,15 @@ title: Xabblll - Home
         return html;
     }
     
-    function detCategoryHtml(category)
+    function getCategoryHtml(category)
     {
-        let html = '<h1>'+category+'</h1>';
+        let html = '<h2>'+category.toUpperCase()+'</h2>';
         let categoryPosts = posts.filter((p)=>p.categories===category);
+        if(categoryPosts.length === 0)
+        {
+            html += '<p>Nothing yet :(</p>';
+            return html;
+        }
         let numberOfPosts = 2;
         categoryPosts = categoryPosts.sortBy(function (o){return -o.date });
         if(categoryPosts.length > numberOfPosts)
@@ -98,8 +103,8 @@ title: Xabblll - Home
 
     //  ================ Script =================== //
 
-    document.getElementById("displayTechart").innerHTML = detCategoryHtml("techart");
-    document.getElementById("displayDevlog").innerHTML = detCategoryHtml("devlog");
+    document.getElementById("displayTechart").innerHTML = getCategoryHtml("techart");
+    document.getElementById("displayDevlog").innerHTML = getCategoryHtml("devlog");
     
     console.log(posts);
     

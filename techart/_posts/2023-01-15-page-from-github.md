@@ -1,6 +1,6 @@
 ---
 layout: post
-description: none :3
+description: Page posted from github.com
 ---
 ## Magic  
 

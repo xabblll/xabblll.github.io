@@ -8,19 +8,18 @@
 <body>
 {% include navigation.html %}
 <div id="fullpage"><h5 style="text-align: right; margin-top:1rem; margin-right: 2rem">Click to Exit</h5></div>
+
 <div class="pageContent">
     <div class="pageContentInner">
         <h1>{{ page.title }}</h1>
-        <img style="width: 1200px; margin: auto;" src="{{ page.image }}" alt="">
-
         {{ content }}
+<!--        <img style="max-width: 100%; object-fit: cover;" src="{{ page.image }}" alt="">-->
         <div style="height: 3rem"></div>
         <div style="height: 1px;width: 100%;background-color: #FFF6"></div>
         <div class="footer">
         <br>
         <sub>
-            Designed by Xabblll<br>
-            Very Legal information
+            Designed by Xabblll in 2023<br>
         </sub>
         </div>
     </div>
