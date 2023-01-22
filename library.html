@@ -4,11 +4,14 @@ title: Library
 ---
 <h1>Library</h1>
 
+<div class="libraryFilter" id="libraryFilter"></div>
+
 <div id="postsCollection"></div>
 
-<div style="display: flex; margin: auto; flex-direction: row;">
-    <button id="buttonPrev" style="padding: 1rem;margin: auto;background-color: #111111;" onclick="prevPage()"><h2><<</h2></button>
-    <button id="buttonNext" style="padding: 1rem;margin: auto;background-color: #111111;" onclick="nextPage()"><h2>>></h2></button>
+<div style="display: flex; width: 300px; margin: auto; flex-direction: row;">
+        <button id="buttonPrev" onclick="prevPage()"><</button>
+        <h2 class="pageNumber" id="pageNumber"></h2>
+        <button id="buttonNext" onclick="nextPage()">></button>
 </div>
 
 <script>
@@ -24,25 +27,30 @@ title: Library
         description: '{{ post.description}}',
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}];
-
+    
+    const categories = [{% for category in site.categories %}
+        "{{ category | first }}"
+        {% unless forloop.last %},{% endunless %}
+    {% endfor %}];
+        
+    console.log("categories:");
+    console.log(categories);
+    
     const postsCollection = document.getElementById("postsCollection");
     const postsPerPage = 12;
-    const lastPage = posts.length / postsPerPage - 1;
+    let lastPage = 0;
+    const buttonPrev = document.getElementById("buttonPrev");
+    const buttonNext = document.getElementById("buttonNext");
+    const pageNumber = document.getElementById("pageNumber");
+    const libraryFilter = document.getElementById("libraryFilter");
     let currentPage = 0;
+    let currentFilter = -1;
     
     // Builder
 
     function generatePostHtml(post)
     {
         let html = '<a class="postThumbLibrary" href=' + post.url + '>';
-        // if(post.image !== "")
-        // {
-        //     html += '<img src="' + post.image + '"alt="PostImage" class="postThumbImage">';
-        // }
-        // else
-        // {
-        //     html += '<img src="/assets/images/someBG.png" alt="PostImage" class="postThumbImage">';
-        // }
         html += '<h5 style="padding: 1rem; display: flex;">' + post.title + '<p style="padding-left: 1rem; font-size: 1rem; line-height: 1.2rem;vertical-align: middle;margin-top: auto;margin-bottom: auto;">' + post.description + '</p></h5>';
         // html += '<p class="postThumbDescription">' + post.description + '</p></a>';
         return html;
@@ -53,16 +61,40 @@ title: Library
     {
         let html = "";
 
+        let filteredPosts;
+        if(currentFilter === -1)
+                filteredPosts = posts;
+        else
+                filteredPosts = posts.filter((p)=>p.categories===categories[currentFilter])
+
+        lastPage = Math.max(0, Math.floor(filteredPosts.length / postsPerPage));
+        
         for (let i = 0; i < postsPerPage; i++)
         {
             let postIndex = currentPage * postsPerPage + i;
-            if(postIndex >= posts.length)
+            if(postIndex >= filteredPosts.length)
             {
                 break;
             }
-            html += generatePostHtml(posts[postIndex]);
+            html += generatePostHtml(filteredPosts[postIndex]);
         }
         postsCollection.innerHTML = html;
+        
+        if(currentPage === 0)
+            buttonPrev.style.opacity = '0%';
+        else
+            buttonPrev.style.opacity = '100%';
+
+        if(currentPage === lastPage)
+            buttonNext.style.opacity = '0%';
+        else
+            buttonNext.style.opacity = '100%';
+
+        if(lastPage !== 0) 
+                pageNumber.innerHTML = (currentPage + 1).toString();
+        else 
+                pageNumber.innerHTML = "";
+            
     }
     
     function changePage(page)
@@ -87,9 +119,39 @@ title: Library
         changePage(currentPage + 1);
     }
     
+    function changeFilter(filter)
+    {
+            currentFilter = filter;
+            currentPage = 0;
+            buildLibraryFilter();
+            updateCollection();
+    }
+    
+    function buildLibraryFilter()
+    {
+        let html = "";
+        if (categories.length === 0) return;
+        
+        html += '<button style="';
+        if(currentFilter === -1)
+            html += 'background-color: white; color: black';
+        html += '"class="button libraryFilterItem" onClick="changeFilter(' + -1 + ')">ALL</div>';
+
+            
+        for (let i = 0; i < categories.length; i++)
+        {
+            html += '<button style="';
+            if(currentFilter === i)
+                    html += 'background-color: white; color: black';
+            html += '"class="button libraryFilterItem" onClick="changeFilter(' + i + ')">' + categories[i].toUpperCase() + '</div>';
+        }
+        libraryFilter.innerHTML = html;
+    }
+    
     // Script
     
     updateCollection();
+    buildLibraryFilter();
     
     
 </script>

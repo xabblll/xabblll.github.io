@@ -221,3 +221,79 @@ hr.small {
   border-color: inherit;
   border-radius: 0.1875rem;
 }
+
+button
+{
+  border: 0;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  border-radius: 0.8rem;
+  margin: auto;
+  background-color: #111111;
+  transition-duration: 0.2s;
+  scale: 100%;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+button:hover
+{
+  transition-duration: 0.2s;
+  background-color: #222;
+  scale: 110%;  
+}
+
+button:active
+{
+  background-color: #888;
+  scale: 140%;
+}
+
+.pageNumber
+{
+  border: 0;
+  padding: 1rem;
+  margin: auto;
+}
+
+.libraryFilter
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.libraryFilterItem
+{
+  padding-top: 1.1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  border: 1px solid white;
+  min-width: 10px;
+  margin-top: 1rem;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-family: "Helvetica", monospace;
+  font-size: 1rem;
+
+}
+
+.libraryFilterItem:hover
+{
+  background-color: #222;
+  scale: 100%;
+}
+
+.libraryFilterItem:active
+{
+  background-color: #888;
+  scale: 100%;
+}
