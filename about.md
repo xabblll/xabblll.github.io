@@ -3,29 +3,29 @@ layout: post
 permalink: about
 title: Vladimir Kurkin
 ---
-## a.k.a. Xabblll
+## Xabblll
 
 ![Thats me](/assets/images/aboutPhoto.jpg "Thats me"){:.circleImage}
 
+## .Info
 
-Technical Artist / Indie Game Develop in spare time.  
-Joined gamedev industry in 2012, and professionally in 2016.
+Technical Artist / Indie Developer in spare time.  
+Pressing buttons since 2012.
 
-I made this site to share my Tech Art tricks, Devlogs and other gamedev related stuff.
+I made this site to share some Tech Art tricks, my devlog and other gamedev related stuff.
 
+---
 
 <br>
-<br>
 
-## Gamedev skills
-<br>
+## .Skills
 
 #### Main
 
 - Unity generalist
 - Game prototyping
 - Code
-  - Runtime C#
+  - C# Runtime
   - Shaders
   - Tools
 - Optimization
@@ -35,9 +35,7 @@ I made this site to share my Tech Art tricks, Devlogs and other gamedev related 
   - Pipelines
 - Can do things fast
 
-<br>
-
-#### Other
+#### Secondary
 
 - 3D
   - Modelling
@@ -52,11 +50,12 @@ I made this site to share my Tech Art tricks, Devlogs and other gamedev related 
   - Gameplay
   - Level Design
   - UI/UX
-  - Audio Design
+  - Sound Design
 - 2D
   - UI
   - Concept Art
-- Other & Rusty stuff
+- Rusty stuff 
+  - Developing in Unreal Engine
   - Coding in C/C++
   - Playing Cello and Piano
-  - Web (not, haha)
+  - Web (jk)
