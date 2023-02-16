@@ -1,7 +1,8 @@
 <nav class="navbar" id="nav66">
     <div class="navbarContent" >
-    {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" class="current">
+        <a href="/"><img src="/assets/images/Logo_white_64.png" alt=""></a>
+        {% for item in site.data.navigation %}
+        <a href="{{ item.link }}" class="current">
         {{ item.name }}
     </a>
     {% endfor %}

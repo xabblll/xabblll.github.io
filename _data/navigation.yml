@@ -1,6 +1,4 @@
-- name: Home
-  link: /
-- name: Library
-  link: /library
+- name: Archive
+  link: /archive
 - name: Xabblll
   link: /about
