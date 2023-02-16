@@ -123,21 +123,21 @@ hr.small {
 //  //-webkit-font-smoothing: antialiased;
 //}
 
-//.pageContent
-//{
-//  padding-top: 0;
-//  padding-left: 3rem;
-//  padding-right: 3rem;
-//  padding-bottom: 0;
-//  margin: auto;
-//  max-width: 1200px;
-//  alignment: center;
-//  text-align: center;
-//  font-family: "Helvetica", monospace;
-//
-//  ////Background
-//  background-color: #232323;
-//
-//  //border-right: 1px solid #FFF2;
-//  //border-left:  1px solid #FFF2;
-//}
+.pageContent
+{
+  padding-top: 0;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 0;
+  margin: auto;
+  max-width: 1200px;
+  alignment: center;
+  text-align: center;
+  font-family: "Helvetica", monospace;
+
+  ////Background
+  background-color: #1e1e1ecc;
+
+  //border-right: 1px solid #FFF2;
+  //border-left:  1px solid #FFF2;
+}
