@@ -2,23 +2,18 @@
 layout: post
 author: Xabblll
 image: /assets/images/doom-thumb.png
-description: Doom in Unity Editor
+description: Science isn't about why, it's about why not!
 ---
 
 
 <iframe width="960" height="540" src="https://www.youtube.com/embed/4d27NQ1zeZw?si=34yW-Qzm3yoDLADU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-## Github
-[Source Code]([https://www.google.com](https://github.com/xabblll/DoomInUnityInspector) "Source Code")
+## About
+Small fun project to learn how to run complex stuff in inspector with it's own CPU, Display, Audio and Inputs, playing midi files in Unity
 
-You can find installation instructions and more
+You can find installation instructions and more in [Github]([https://www.google.com](https://github.com/xabblll/DoomInUnityInspector) "Github")
 
-
-## Why?
-Science isn't about why, it's about why not!
-
-Also to learn how to run complex stuff in inspector with it's own CPU, Display, Audio and Inputs, playing midi files in Unity
 
 
 ## Credits
