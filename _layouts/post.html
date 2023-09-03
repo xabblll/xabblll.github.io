@@ -20,7 +20,7 @@
 <div id="fullpage"><h5 style="text-align: right; margin-top:1rem; margin-right: 2rem">Click to Exit</h5></div>
 
 <div class="pageContent">
-    <div class="pageContentInner">
+    <div id="content" class="pageContentInner">
         <h1>{{ page.title }}</h1>
         <div style="height: 1rem"></div>
         {{ content }}
@@ -38,8 +38,7 @@
 </div>
 </body>
 <script>
-    // function getPics() {} //just for this demo
-    const imgs = document.querySelectorAll('img');
+    const imgs = document.querySelectorAll('div#content img',);
     const fullPage = document.querySelector('#fullpage');
 
     imgs.forEach(img => {

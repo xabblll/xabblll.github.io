@@ -4,7 +4,7 @@ title: Xabblll - Home
 ---
 
 <!--<h1></h1>-->
-<h1>Recent</h1>
+<h1>.Content</h1>
 <br>
 <div id="recentLogs"></div>
 
@@ -102,27 +102,13 @@ title: Xabblll - Home
             html += getPostsHtml(row) + '<br>';
 
         }
-        
-        // let row1 = categoryPosts;
-        // if(row1.length > numberOfPosts)
-        // {
-        //     row1 = categoryPosts.slice(0, numberOfPosts);
-        // }
-        // html += getPostsHtml(row1);
-        // let row2 = categoryPosts;
-        // if(categoryPosts.length > numberOfPosts + 1)
-        // {
-        //     row2 = categoryPosts.slice(numberOfPosts, numberOfPosts);
-        //     html += getPostsHtml(row2);
-        // }
         return html;
     }
     
     
 
     //  ================ Script =================== //
-    // document.body.innerHTML = '<img class="bannerImg" src="/assets/images/DoomBanner.png">' + document.body.innerHTML;
 
-    document.getElementById("recentLogs").innerHTML = getCategoryHtml("log");
+    document.getElementById("recentLogs").innerHTML = getCategoryHtml("pages");
     
 </script>

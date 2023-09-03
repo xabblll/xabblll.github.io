@@ -1,34 +1,34 @@
 <!doctype html>
 <html>
-<head>
-    <link rel="icon" href="/assets/images/Logo_white_64.png">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KB6KDGZE5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-4KB6KDGZE5');
-    </script>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/mainPageStyles.css">
-</head>
-<body>
-{% include navigation.html %}
-<div class="pageContent">
-    <div class="pageContentInner">
-        {{ content }}
-        <br><br>
-        <div style="height: 1px;width: 100%;background-color: #FFF6"></div>
-        <br>
-        <sub>
-            Designed by Xabblll in 2023<br>
-        </sub>
-        <div style="height: 42px"></div>
-
-    </div>
-</div>
-</body>
+    <head>
+        <link rel="icon" href="/assets/images/Logo_white_64.png">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KB6KDGZE5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+    
+            gtag('config', 'G-4KB6KDGZE5');
+        </script>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/assets/css/mainPageStyles.css">
+    </head>
+    <body>
+        {% include navigation.html %}
+        <div class="mainPageContent">
+            <div class="pageContentInner">
+                {{ content }}
+                <br><br>
+                <div style="height: 1px;width: 100%;background-color: #FFF6"></div>
+                <br>
+                <sub>
+                    Designed by Xabblll in 2023<br>
+                </sub>
+                <div style="height: 42px"></div>
+        
+            </div>
+        </div>
+    </body>
 </html>
