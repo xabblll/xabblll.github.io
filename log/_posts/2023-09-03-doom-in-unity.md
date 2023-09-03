@@ -2,7 +2,7 @@
 layout: post
 author: Xabblll
 image: /assets/images/doom-thumb.png
-description: Science isn't about why, it's about why not!
+description: Science isn not about why, it is about why not!
 ---
 
 
