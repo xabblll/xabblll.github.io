@@ -9,10 +9,8 @@ title: Vladimir Kurkin
 
 ## .Info
 
-Technical Artist / Indie Developer in spare time.  
+Graphics Programmer / Technical Artist / Indie Developer  
 Pressing buttons since 2012.
-
-I made this site to share some Tech Art tricks, my devlog and other gamedev related stuff.
 
 ---
 
@@ -33,7 +31,6 @@ I made this site to share some Tech Art tricks, my devlog and other gamedev rela
   - Graphics
   - Assets
   - Pipelines
-- Can do things fast
 
 #### Secondary
 
@@ -53,9 +50,7 @@ I made this site to share some Tech Art tricks, my devlog and other gamedev rela
   - Sound Design
 - 2D
   - UI
-  - Concept Art
-- Rusty stuff 
-  - Developing in Unreal Engine
+- Rusty stuff
   - Coding in C/C++
   - Playing Cello and Piano
-  - Web (jk)
+  - Concept Art
