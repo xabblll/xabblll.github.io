@@ -3,13 +3,19 @@ layout: post
 permalink: about
 title: Vladimir Kurkin
 ---
+
+
+# {{ page.title }}
 ## Xabblll
 
 ![Thats me](/assets/images/aboutPhoto.jpg "Thats me"){:.circleImage}
 
-## .Info
 
-Graphics Programmer / Technical Artist / Indie Developer  
+<br>
+
+### Graphics Programmer / Technical Artist / Indie Developer
+
+
 Pressing buttons since 2012.
 
 ---
@@ -24,6 +30,7 @@ Pressing buttons since 2012.
 - Game prototyping
 - Code
   - C# Runtime
+  - Graphics
   - Shaders
   - Tools
 - Optimization
@@ -50,7 +57,4 @@ Pressing buttons since 2012.
   - Sound Design
 - 2D
   - UI
-- Rusty stuff
-  - Coding in C/C++
-  - Playing Cello and Piano
   - Concept Art
