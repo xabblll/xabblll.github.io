@@ -17,7 +17,7 @@ After decade of working in Unity, making a career as a technical artist and late
 I decided to take a break from office job, and start making own indie game.
 This was in September, I'm sure if you follow gamedev industry news, you already know what happen.
 
-So basically Unity dropped terrible licence changes. First versions were insanely poorly composed as well.
+So basically Unity dropped terrible licence changes. First versions were poorly composed as well.
 All industry was on fire. Indie devs mostly because they can't understand bad written post,
 and mobile F2P studios because price changes will hurt them badly. Later Unity tried to fix situation, by
 posting new, more thoughtfully placed changes, and thankfully fired John R, who was proposing same per-install
