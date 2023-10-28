@@ -159,7 +159,7 @@ For model file loading I use [Assimp](https://github.com/assimp/assimp)
 
 ### Entity and Components
 
-In first I was thinking about ECS, but I'm not sure where to use it. Complex systems can be done as components,
+First I was thinking about ECS, but I'm not sure where to use it. Complex systems can be done as components,
 just like Particles, where instead of using 1000 game entities, you use 1 that handles 1000 particles. ECS maybe good for strategy,
 factory and other games with crazy amount of units and stuff, but for all else this architecture can be excessive and 
 performance heavy. So for now I use most basic approach - Objects with Components.
@@ -195,7 +195,7 @@ Only 2 components are available right now
 - Mesh
 - Material (just Shader for now)
 
-Current state after first month of learning C++ and working on engine
+Current state
 
 ![Models and Transforms](/assets/images/solitude/solitude-devlog0-img3.jpg "Models and Transforms")
 
@@ -209,5 +209,30 @@ After that I'll do
 - Missing basic rendering features like Materials, Framebuffers
 - Event system
 
+
+<br>
+
+## Conclusion
+
+Compared to C#, C/C++ syntax is a bit tough, headers and specification of ".", "->", "::" in my opinion is 
+redundant, std library and modern C++ features mostly unreadable and have additional performance cost, so better to
+not use them by default. Project setup quite unintuitive for beginners.
+
+In other hand low level control is awesome, syntax is very similar to C#, ability to use macros is godlike, just don't
+overuse them.
+
+Of course I don't have much to show right now, but I think for first month of learning new language and
+game engines my progress is more than fine.
+
+Also I downloaded some other engine source code repos, to be able to look how they did things themself. It was very
+helpful, to compare common approaches.
+
+Research repos I use
+- [Doom3](https://github.com/id-Software/DOOM-3-BFG)
+- [UE5](https://docs.unrealengine.com/5.3/en-US/downloading-unreal-engine-source-code/)
+- [Hazel](https://github.com/TheCherno/Hazel)
+- [Godot](https://github.com/godotengine/godot)
+
+<br>
 
 Thanks for reading :*
