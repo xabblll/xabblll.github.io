@@ -111,17 +111,17 @@ Also take a look at godlike [OpenGL tutorials](https://learnopengl.com/)
 ### Editor UI
 
 ImGui samples are awesome, also **Docking** branch makes it behave just like Unity, Unreal and other modular window apps.
-Still I make some changes so it work even more similar to them
+I made some changes so it work even more similar to them
 - big second main menu for game state control other toolbar buttons
 - last window can't be undocked
 - upon undocking window area collapsed so no hole left
 
-Changes I made are quite hacky and need to be revisited later.
+Changes I made are quite hacky and needed to be revisited later.
 
-ImGuiRender implementation was slightly modified, basically integrated in my render loop, but render state setup and other GL calls are still
-there. ImGuiSDL implementation was modified to work with my window abstraction
+ImGui OpenGL implementation was slightly modified, basically integrated in my render loop, but render state setup and other GL calls are still
+there. ImGui SDL implementation was modified to work with my window abstraction
 
-Scene View window was most tough. I decided to now use custom render target and just draw inside window with Scissor and Viewport Rect, 
+Scene View window was most tough. I decided to not use custom render target and just draw inside window with Scissor and Viewport Rect, 
 and after, I render ImGui without alpha and background, so Editor's Scene View is very close to final game viewport, without
 render target blit overhead. But I almost sure, I will replace my method with render to UI image later anyway, we will see.
 
@@ -154,6 +154,7 @@ and with some uniform bindings went 3D
 ![3D Meshes](/assets/images/solitude/solitude-devlog0-img2.jpeg "3D Meshes")
 
 For image file loading I use [stb image](https://github.com/nothings/stb)
+
 For model file loading I use [Assimp](https://github.com/assimp/assimp)
 
 
