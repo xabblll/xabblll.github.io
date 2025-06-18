@@ -121,14 +121,6 @@ body
   text-align: center;
   font-family: "Helvetica", monospace;
 
-  ////Background
-  //background-color: rgba(17, 17, 17, 255);
-  //background:
-  //linear-gradient(90deg, #0003, #222A 50%, #222A 50%, #0003);
-
-  //border-right: 1px solid #FFF2;
-  //border-left:  1px solid #FFF2;
-
   background-color: #171717;
   box-shadow: 0px 0px 34px #0008;
   height: auto;
@@ -147,7 +139,7 @@ body
   font-family: "Helvetica", monospace;
 
   ////Background
-  //background-color: rgba(17, 17, 17, 255);
+  background-color: rgba(34, 34, 34, 255);
   //background:
   //linear-gradient(90deg, #0003, #222A 50%, #222A 50%, #0003);
   
@@ -155,7 +147,7 @@ body
   //border-left:  1px solid #FFF2;
 
   //background-color: #1e1e1ecc;
-  background-color: #171717;
+  //background-color: #323030;
   box-shadow: 0px 0px 34px #0008;
   
   height: auto;
@@ -170,10 +162,16 @@ body
   /*background-color: #331111;*/
 }
 
+//@font-face {
+//  font-family: "Inter";
+//  src: url("../assets/fonts/Inter.ttf") format("TrueType");
+//}
+
 html,h1,h2,h3,h4,h5,h6,p,a,li,u,b,sub,strong
 {
-  font-family: "Helvetica", monospace;
-  color: #FFFA;
+  //font-family: "Helvetica", sans-serif;
+  font-family: "Inter", sans-serif;
+  color: #FFFB;
   text-align: left;
   padding: 0;
   margin: 0;
@@ -187,18 +185,29 @@ hr
   color: #FFF6;
 }
 
-html,h1,h2,h3,h4,h5,h6,strong
+body
 {
+}
+
+html,h1,h2
+{
+  //font-family: "Inter", sans-serif;
+  //font-weight: bolder;
   color: #FFF;
-  //word-wrap: normal;
+}
+
+h3,h4,h5,h6,strong
+{
+  //font-family: "Inter", sans-serif;
+  color: #FFFD;
 }
 
 p, li, a, u, b,
 {
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.666rem;
   //display: flex;
-  margin-bottom: 1.42rem;
+  margin-bottom: 1.420rem;
 }
 
 a

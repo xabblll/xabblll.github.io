@@ -1,21 +1,32 @@
 ---
 layout: post
-author: Gobo
+author: Xabblll
 permalink: kinetic-tools
 tags: documentation
-image: /assets/images/thumb_kinetic.png
+image: /assets/images/kinetic/Kinetic_thumb.png
 description: Physics based tools for Unity Editor
 ---
-parag
+
 
 
 # Kinetic Tools
 
 
-<br>
+<iframe width="1000" height="563" src="https://www.youtube.com/embed/7C8Mf560jak" title="Kinetic Tools - Object Placement &amp; Gravity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Getting Started
 
+<div style="margin: 4rem">
+<a href="https://assetstore.unity.com/packages/slug/320736" 
+style="
+background-color: #000;padding: 2rem;border-radius:1rem;
+font-size: 2rem;
+font-weight: bold;
+text-decoration:none;
+">
+Get on Asset Store</a></div>
+---
+
+## Documentation
 
 ### Opening the Kinetic Tools Overlay
 The Kinetic Tools overlay appears automatically in the Scene view when the package is installed. If you don't see it:
@@ -24,7 +35,14 @@ The Kinetic Tools overlay appears automatically in the Scene view when the packa
 3. Select "Overlay Menu"
 4. Select "Kinetic Tools" from the overlay menu
 
+
+![Overlay Menu Unity 2022](/assets/images/kinetic/overlay-menu-unity22.png "Overlay Menu in Unity 2022")
+> Accessing Kinetic Tools from collapsed Overlay Menu
+
 <br>
+
+![Overlay Menu Unity 6](/assets/images/kinetic/overlay-menu-unity6.png "Overlay Menu in Unity 6")
+> Accessing Kinetic Tools in expanded Overlay Menu
 
 
 ## Gravity Tool
@@ -45,12 +63,7 @@ The Kinetic Tools overlay appears automatically in the Scene view when the packa
     - **Pivot**: Simulates each selected object independently
         - Note: You can select multiple objects inside one hierarchy, for example: Parent, Child1, Child2. In this case all three objects will be simulated separately. If you select only Parent object, all object in its hierarchy will be simulated as one object
 
-
-<br>
-<br>
-<br>
-<br>
-
+![Pivot Mode](/assets/images/kinetic/PivotMode.png "Pivot Mode")
 
 
 ## Snap to Surface Tool
@@ -71,12 +84,13 @@ The Kinetic Tools overlay appears automatically in the Scene view when the packa
     - **Center**: Treats all selected objects as one combined object.
     - **Pivot**: Each selected object will snap independently
         - Note: You can select multiple objects inside one hierarchy, for example: Parent, Child1, Child2. In this case all three objects will snap separately. If you select only Parent object, all objects in its hierarchy will be snapped as one object
+          ![Pivot Mode](/assets/images/kinetic/PivotMode.png "Pivot Mode")
 - **Local/Global Rotation** (Setting in Scene Window, on the right from Pivot Mode. Can be toggled by X key):
     - **Local**: Use local object axis as input orientation to determine rotation on surface (Recommended in most cases)
     - **Global**: Use global (world aligned) axis as input orientation to determine rotation on surface
         - Useful in cases where you want to move a group of rotated objects along some surface, without losing rotation offsets
         - If you decided to use this mode, you should probably select +Y axis as Object Axis, unless more unique case
-
+          ![Rotation Mode](/assets/images/kinetic/RotationMode.png "Rotation Mode")
 
 ### Depenetration Modes
 Control how objects are placed on surfaces
@@ -96,6 +110,9 @@ Control how objects are placed on surfaces
 To access advanced settings:
 1. Click the "Advanced Settings" button in the Kinetic Tools overlay
 2. Alternatively, go to Unity's main menu: Edit > Preferences > Kinetic Tools
+
+![Advanced Settings](/assets/images/kinetic/Advanced%20Settings.png "Advanced Settings")
+
 
 ### Shortcut Configuration
 - **Modifier Key Shortcut**:
@@ -118,7 +135,8 @@ To access advanced settings:
     - For example, the entry "Grass_" will exclude renderers named "Grass_01", "DeGrass_Low", "Grass_Green" e.t.c.
     - Name comparison is case sensitive
 - **Custom Filter**: You can extend filters with C# code. Example code:
-```csharp
+  
+{% highlight csharp %}
 // Inside initialization code
 KineticToolsParameters.instance.Filter.ShouldIncludeObjectCustomPass += ShouldIncludeObject;
 
@@ -128,8 +146,7 @@ public bool ShouldIncludeObject(GameObject gameObject)
     // Your filter logic
     return true;
 }
-```
-
+{% endhighlight %}
 
 ### Other Notes
 - **Limit Distance of Mesh Search** option (advanced settings): If your scenes contain a massive amount of objects, consider enabling Distance limit to improve performance.
@@ -142,15 +159,3 @@ public bool ShouldIncludeObject(GameObject gameObject)
     - If checked, all raycasts will ignore backfaces
     - Turn this option off when snapping to double-sided meshes
 - Objects without Renderers can be used as selected objects. In this case, they will be treated as small sphere for physics simulations, or as single point for snapping without physics.
-
-
-
-
-### Reset Options
-Use the "Reset" button in Advanced Settings to restore all defaults.
-
-
----
-
-
-This documentation covers the core functionality of Kinetic Tools. For more specific workflows or troubleshooting, please refer to the tooltips in the overlay.
