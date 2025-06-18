@@ -78,10 +78,10 @@ title: Xabblll - Home
         return html;
     }
     
-    function getCategoryHtml(cat1, cat2)
+    function getCategoryHtml()
     {
         let html = "";
-        let categoryPosts = posts.filter((p)=>(p.categories===cat1 || p.categories===cat2));
+        let categoryPosts = posts;//.filter((p)=>(p.categories===cat1 || p.categories===cat2));
         if(categoryPosts.length === 0)
         {
             html += '<p>Nothing yet :(</p>';
@@ -110,7 +110,7 @@ title: Xabblll - Home
     //  ================ Script =================== //
 
     
-    document.getElementById("recentLogs").innerHTML = getCategoryHtml("solitude", "pages");
+    document.getElementById("recentLogs").innerHTML = getCategoryHtml();
     // document.getElementById("recentLogs").innerHTML = getCategoryHtml("solitude");
     
 </script>
