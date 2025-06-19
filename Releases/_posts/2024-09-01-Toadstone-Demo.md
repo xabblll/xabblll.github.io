@@ -28,66 +28,94 @@ Play on itch.io</a></div>
 
 
 ## Dev Notes
-Short game was done for Pirate GameJam 15. In total development took about 10 days + 3 first days we were searching for ideas.
-Game made using Unity engine.
-          
-### Render
-Game plays in browsers. I'm not very familiar with web builds, but comparing to other entries, our have one of smallest build/load sizes,
-while having one of most advanced 3D graphics. Largely because it's using my custom SRP. For example empty Unity Project WebBuild with URP weights about 12Mb, 
-while empty project with my SRP weight about 8Mb. Graphics wise my render is pretty simple, but big PCF shadow filter, ACES tonemapping and Bloom makes it look not that bad.
 
-Most of the game rendered with single PBR-Lit shader, with some exceptions for Frog, transparent glass and particles
+This short game was created for Pirate GameJam 15. The total development time was about 10 days, plus 3 initial days spent brainstorming ideas.
+The game was made using the Unity engine.
+
+---
+
+### Render
+
+The game runs in browsers. I’m not very experienced with web builds, but compared to other entries, ours had one of the smallest build/load sizes, while still featuring some of the most advanced 3D graphics—mainly thanks to my custom Scriptable Render Pipeline (SRP).
+
+For example, an empty Unity WebGL build using URP weighs about 12MB, while an empty project with my SRP is around 8MB. Graphically, my renderer is fairly simple, but features like PCF shadows, ACES tonemapping, and bloom help it look quite decent.
+
+Most of the game is rendered using a single PBR-lit shader, with exceptions for the frog character, transparent glass, and particles.
+
+---
 
 ### Assets
-We made pretty much all assets by hand. Fonts and some of vfx sounds uses open free assets.
 
-Game level built in Blender (mostly) and finished in Unity. For some reason I decided to model most environment as unique meshes.
-It slightly helped with freedom of shapes, but in hindsight was more time-consuming. Probably better to use more modular assets, and add unique touches later.
-Most environment asset uses one of 3 materials, with baked AO stored in Vertex Color (not all models) 
+We created almost all assets by hand. Fonts and some VFX sounds use freely available open assets.
 
-Lovely frog guy and his animations made by my friend Pag1iaccio. Alongside with most of VFX assets.
+The game level was primarily built in Blender, then finalized in Unity. For some reason, I decided to model most of the environment as unique meshes. This allowed for more flexibility in shapes, but in hindsight, it was more time-consuming than necessary. A better approach would have been using modular assets and adding unique details later.
 
-Sounds are recorded samples of me, slapping hands on ceramic floor and other similar stuff. 
-Music composed by me in Ableton in last hours of jam, so in my opinion came out very rushed and probably doesn't fit our game very well.
-                                                                  
+Most environmental assets share one of three materials, with AO baked into vertex colors (though not all models use this).
+
+The lovely frog character and his animations were made by my friend **Pag1iaccio**, along with most of the VFX assets.
+
+The sound effects were created from recorded samples of me slapping my hands on ceramic tiles and similar improvised methods.
+The music was composed in Ableton during the final hours of the jam. As a result, it feels rushed, and probably doesn’t fit the game as well as it could have.
+
+---
 
 ### Code
-Nothing special, but I wasted some time, writing player controller, splines and complex "Light-Swapper" system.
-I was planning making more levels, this is why I decided to do it this way. For example controller supports my interaction system and moving platforms,
-combined with advanced light-swapper system we were hoping to make "mine cart level", light-swapper can work with different light colors, and any of combination of them,
-for example it can do stuff like:
-- In shadow - Obj1
-- Lit by Red light - Obj2
-- Lit by Green light - Obj3
-- Lit by Yellow(Red+Green) light - Obj4
 
-But it all ended up unused
+Nothing too special here, but I wasted some time building a custom player controller, spline system, and a complex “Light Swapper” system.
+I had planned for more levels, which is why I went with a more scalable approach.
 
-### Why the Game is so short
-Originally we planned to make about 6 levels, first level was about how frog started his journey, and last was a fight with final boss.
-3 rooms in demo are more or less half of original 2nd level.
+The controller supports my interaction system and moving platforms. Combined with the Light Swapper, we were hoping to create a "mine cart level". The Light Swapper could handle multiple colored lights and their combinations. For example:
 
-Unfortunately, our friend, who wanted to help with level design was busy, and left us right after jam started, so most level design done by me,
-with help of my girlfriend (z1s), but we cracked how we wanted levels to plays and feels on last couple of days. If we had another day or two,
-game probably became twice as long, gameplay-wise.
+* In shadow → Obj1
+* Lit by red light → Obj2
+* Lit by green light → Obj3
+* Lit by yellow (red + green) → Obj4
 
-### Final thoughts
-I really happy with finished demo, even with it being so short. I re-learned a lot of forgotten fast development skills and enjoyed working with team.
+Sadly, all of that ended up unused.
 
-Right after jam submissions concluded, I was ready to start working on full game with better graphics, proper story & lore. Finally make ~2 hours game for steam.
-But combinations of some factors made me freeze this project for better times.
-What factors?
-1. Search of final visual stile. I want to make polished, beautiful, stylized 3D game. Game mechanics requires dark locations, which are tough to make look good and interesting from screenshots. This is pretty doable, but needs a lot of work
-2. Not sure about current Lore/Store. Probably should be leveled up, if I want to make similar game to "Limbo"/"Inside"
-3. Less important, but still messed me up - Pirate Software and jam organisation was a complete mess:
-   a) About 2500 submission was made 
-   b) They decided to make judging stage totally closed, instead of GMTK's style community + judges voting
-   c) Very few and how it looks unqualified judges were assigned to play huge amount of games. Some games played by 0-1 judge, or have single judge's verdict like "I can't understand" in simple game with all needed information on itch page
-   d) They extended judging time, which is understandable, but instead of continue judging process, it looks like they just selected 50-200 games by random, then played them for a week, and then let Thor show 10 best games.
-   e) I do not know Thor for long, mostly I know him as "Indie inspirational guy from shorts". Of course, I watched his stream, when jam ended. I don't really understand if he counts himself as game developer, since he streams ~everyday for 12 hours, either programming his minecraft server, either playing games. But ok, at least he is doing great work to inspire people like myself. Finally, last day of "extended judgement", Thor streams. I think - oh, nice, he will show all ~200 finalist in quick overview (since submission list was 2500, it's pretty common to extend honorable mentions to at least 100), but no, he decided to program in Java for 9 hours, and then show 10, most (in my opinion) random games, while making same exact comment about each one "I never saw something like that!", about literally everything, most gamedevs or even players, who played indie knew.
-   f) I don't want to make top 10 games look bad, and for sure don't think our game is better, but situation handled awfully. I was very disappointed. Never meet your heroes, I guess.
+---
 
-I hope someday I will continue, but for now I'm doing other projects, and not ready to return to this game. 
+### Why the Game Is So Short
+
+We originally planned to make around 6 levels, with the first introducing the frog’s journey and the final one being a boss fight. The three rooms in the demo represent about half of the original second level.
+
+Unfortunately, our friend who offered to help with level design became busy and dropped out right after the jam started. That left most of the level design to me, with help from my girlfriend (**z1s**).
+
+We only really figured out how we wanted the levels to feel and play in the last couple of days. With even one or two extra days, the game could have been twice as long in terms of gameplay.
+
+---
+
+### Final Thoughts
+
+Despite how short it is, I’m really happy with the finished demo. It helped me re-learn fast development, and I enjoyed working with a team again.
+
+Right after submissions closed, I was excited to start working on a full version with better graphics, a proper story and lore—maybe even a 2-hour game for Steam.
+
+But a few things made me put the project on hold:
+
+---
+
+#### Why I Put the Game on Ice
+
+1. Visual Style Search
+   I want the final game to be polished, beautiful, and stylized in 3D. But the mechanics require dark environments, which are tricky to make look appealing in screenshots. It's doable, but needs a lot of work.
+
+2. Unclear Lore/Story
+   The current story probably isn’t strong enough. If I want something in the spirit of *Limbo* or *Inside*, I’ll need to level it up significantly.
+
+3. Pirate Software & Jam Organization (Minor but Frustrating)
+
+    * About 2,500 submissions were made.
+    * The judging stage was closed, unlike GMTK’s more transparent community + jury voting.
+    * Very few (and seemingly unqualified) judges were assigned to a huge number of games. Some games were played by zero or one judge, with comments like “I can’t understand” even when the game had full instructions on the itch.io page.
+    * The judging deadline was extended, which is fair, but it looks like they picked 50–200 games at random, played them for a week, and then had Thor show the “top 10.”
+    * I don’t know Thor well—mostly from inspirational shorts. I watched his final stream, hoping he’d give a quick overview of the top \~200, but instead he coded in Java for 9 hours, then showed 10 games, making nearly identical comments like *“I’ve never seen anything like this!”* about each one. It felt… random and frustrating.
+    * I don’t want to discredit the top 10. They may fully deserve the spotlight. But the process was handled poorly, and I left very disappointed. Never meet your heroes, I guess.
+
+---
+
+I hope to return to this project someday. But for now, I’m working on other ideas and not ready to revisit this one just yet.
+
 
 
 
