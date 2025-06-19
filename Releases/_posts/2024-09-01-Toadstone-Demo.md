@@ -75,6 +75,22 @@ Sadly, all of that ended up unused.
 
 ---
 
+### Great Camerawork!
+
+At some point, we decided to lock the camera and use automatic transitions between views.
+I used the Cinemachine package to set up automatic camera rigs and wrote a custom trigger system, but it turned out to be quite challenging.
+
+Cinemachine isn’t ideal for highly dynamic systems. For example, trying to move the camera smoothly around the player based on position is almost impossible to get right.
+Even worse, the player’s input depends on the camera angle—so if the camera suddenly shifts or moves continuously, the controls can become very frustrating.
+In tight corridors, the camera would also clip through walls, which hurt the overall polish.
+
+Despite these issues, most players enjoyed the result, and I think the locked camera angles added a cinematic feel.
+It also had a practical benefit: since players can’t look around freely, we only had to design the visible side of each level section.
+
+For the full version of the game, though, this is one of the core systems that would need to be rewritten into a fully custom solution.
+
+---
+
 ### Why the Game Is So Short
 
 We originally planned to make around 6 levels, with the first introducing the frog’s journey and the final one being a boss fight. The three rooms in the demo represent about half of the original second level.
