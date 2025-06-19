@@ -1,49 +1,39 @@
 ---
 layout: post
 permalink: about
-title: Vladimir Kurkin
+title: About
 ---
-
 
 # {{ page.title }}
-## Xabblll
 
-![Thats me](/assets/images/aboutPhoto.jpg "Thats me"){:.circleImage}
-
-
-<br>
-
-### Graphics Programmer / Technical Artist / Indie Developer
+Hello, I'm **Vladimir Kurkin**. I'm a game developer with more than 10 years of experience in professional games industry.
+From Technical Art to Graphics Programming to Indie Development. I don't claim to know everything where is gamedev, but I can certainly share some knowledge.
 
 
-Pressing buttons since 2012.
+## Skills
 
----
-
-<br>
-
-## .Skills
-
-#### Main
+### Professional
 
 - Unity generalist
 - Game prototyping
-- Code
-  - C# Runtime
-  - Graphics
+- Programming
+  - Graphics Programming in Unity
+  - Unity C# Runtime
   - Shaders
-  - Tools
+  - Unity Editor Tools
+  - Low-Level Graphics in Native C++ apps
 - Optimization
-  - Code
   - Graphics
-  - Assets
-  - Pipelines
+  - Tile-based GPU specific
+  - Runtime Code
+  - 2D/3D/Audio Assets
+  - Asset creation pipelines
+  - Project structure and guidelines
 
-#### Secondary
+### Additional
 
 - 3D
-  - Modelling
-  - Texturing
+  - Modelling & Texturing
   - Skinning & Rigging
   - Animation
 - Sound

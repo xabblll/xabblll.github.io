@@ -70,6 +70,30 @@ img
   border-radius: 50%;
 }
 
+.bigButton
+{
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  overflow: clip;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: fit-content;
+}
+
+.youtubePlayer
+{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
 blockquote
 {
   font-family: "Helvetica", monospace;

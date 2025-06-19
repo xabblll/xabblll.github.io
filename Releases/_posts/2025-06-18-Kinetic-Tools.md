@@ -11,19 +11,11 @@ description: Physics based tools for Unity Editor
 
 # Kinetic Tools
 
+<iframe  src="https://www.youtube.com/embed/7C8Mf560jak" title="Kinetic Tools - Object Placement &amp; Gravity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{:.youtubePlayer}
 
-<iframe width="1000" height="563" src="https://www.youtube.com/embed/7C8Mf560jak" title="Kinetic Tools - Object Placement &amp; Gravity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<a class="bigButton" href="https://assetstore.unity.com/packages/slug/320736">Get on Asset Store</a>
 
-
-<div style="margin: 4rem">
-<a href="https://assetstore.unity.com/packages/slug/320736" 
-style="
-background-color: #000;padding: 2rem;border-radius:1rem;
-font-size: 2rem;
-font-weight: bold;
-text-decoration:none;
-">
-Get on Asset Store</a></div>
 ---
 
 ## Documentation

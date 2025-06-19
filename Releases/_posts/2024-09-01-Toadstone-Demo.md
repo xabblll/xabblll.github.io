@@ -3,7 +3,7 @@ layout: post
 author: Xabblll
 permalink: toadstone-demo
 image: /assets/images/jab-500.png
-description: Our Game Jam entry. Short Demo game about frog
+description: Frog adventure Game <br> Our Game Jam entry from 2024
 ---
 
 
@@ -15,16 +15,8 @@ description: Our Game Jam entry. Short Demo game about frog
 ![Screen1](https://img.itch.zone/aW1hZ2UvMjg0Mzk4My8xNzE1ODI3NS5wbmc=/original/G0TVTz.png "Screenshot 2")
 ![Screen1](https://img.itch.zone/aW1hZ2UvMjg0Mzk4My8xNzE1ODI4NS5wbmc=/original/TE%2F4Yy.png "Screenshot 3")
 
+<a class="bigButton" href="https://lachuga.itch.io/toadstone">Play on itch.io</a>
 
-<div style="margin: 4rem">
-<a href="https://lachuga.itch.io/toadstone" 
-style="
-background-color: #000;padding: 2rem;border-radius:1rem;
-font-size: 2rem;
-font-weight: bold;
-text-decoration:none;
-">
-Play on itch.io</a></div>
 
 
 ## Dev Notes

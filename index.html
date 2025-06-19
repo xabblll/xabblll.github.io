@@ -83,7 +83,7 @@ title: Xabblll - Home
         let html = "";
         //let categoryPosts = posts;//.filter((p)=>(p.categories===cat1 || p.categories===cat2));
         let categoryPosts = posts.filter((p)=>(p.categories === category));
-        html += '<h4>' + category + '</h4><br>';
+        html += '<h2>' + category + '</h2><br>';
         
         let postsPerRow = 2;
         const MAX_ROWS = 4;
@@ -105,7 +105,7 @@ title: Xabblll - Home
 
     //  ================ Script =================== //
     
-    document.getElementById("recentLogs").innerHTML = getCategoryHtml("Releases") + '<br><br>';
+    document.getElementById("recentLogs").innerHTML = getCategoryHtml("Releases") + '<br><br><br><br>';
     document.getElementById("recentLogs").innerHTML += getCategoryHtml("Posts");
     
 </script>
