@@ -16,6 +16,8 @@ description: Physics based tools for Unity Editor
 
 <!-- <a class="bigButton" href="https://assetstore.unity.com/packages/slug/320736">Get on Asset Store</a> -->
 
+<a class="bigButton" href="https://lachuga.itch.io/kinetic-tools">Get on itch.io</a>
+
 ---
 
 ## Documentation
